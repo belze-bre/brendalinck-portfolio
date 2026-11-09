@@ -606,3 +606,41 @@ ul { list-style: none; }
 @media(max-width:767px) {
   .work-card__media--millie > img {width:82%;}
 }
+
+/* Remaining cases form two columns below the featured work. */
+.work-secondary {
+  grid-column:1 / -1;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:64px 40px;
+}
+.work-secondary .work-card--horizontal {
+  display:block;
+  grid-column:auto;
+  grid-row:auto;
+  margin:0;
+  padding:0;
+  border:0;
+}
+.work-secondary .work-card--horizontal .work-card__media {
+  width:100%;
+  height:auto;
+  min-height:0;
+  aspect-ratio:16/10;
+}
+.work-secondary .work-card--horizontal .work-card__caption { padding:24px 0 0; }
+.work-secondary .work-card--horizontal h3 { font-size:clamp(24px,2.1vw,34px); line-height:1.2; }
+.work-secondary .student-card { min-height:0; padding:clamp(18px,2vw,32px); }
+.work-secondary .student-card__title { font-size:clamp(28px,3vw,52px); margin-block:16px; }
+.work-list .work-secondary .work-card::before { top:-27px; }
+.work-secondary .work-card--horizontal .work-card__media--millie > img {
+  width:76%;
+  height:auto;
+  max-width:920px;
+}
+@media(max-width:767px) {
+  .work-secondary { grid-template-columns:minmax(0,1fr); row-gap:56px; }
+  .work-secondary .work-card--horizontal h3 { font-size:28px; }
+  .work-secondary .work-card--horizontal .work-card__caption { padding-top:20px; }
+  .work-secondary .work-card--horizontal .work-card__media--millie > img { width:82%; }
+}
