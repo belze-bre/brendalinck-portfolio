@@ -33,6 +33,8 @@ a { color: inherit; text-decoration: none; }
 /* ── Full-bleed image ───────────────────────────────────── */
 .case-bleed-image {
   width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
   background: var(--color-surface);
   overflow: hidden;
 }
@@ -43,7 +45,8 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ── Intro block ────────────────────────────────────────── */
-.case-intro { padding-top: 60px; }
+.case-intro { padding-top: 60px; padding-bottom: 40px; }
+.case-intro .case-meta-row { margin-bottom: 0; }
 
 /* ── Two-column label+content layout ───────────────────── */
 .case-cols-wide {
