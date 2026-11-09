@@ -461,6 +461,33 @@ ul { list-style: none; }
     max-width: none;
     padding-inline: clamp(40px, 3vw, 80px);
   }
+
+  /* Give every secondary case the same cover frame and caption column. */
+  .work-section {
+    --work-cover-height: clamp(360px, 22vw, 480px);
+    --work-cover-padding: clamp(24px, 1.5vw, 32px);
+  }
+  .work-card--horizontal,
+  .work-card--compact {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 48px;
+    max-width: none;
+  }
+  .work-card--horizontal .work-card__media,
+  .work-card--compact .work-card__media {
+    height: var(--work-cover-height);
+    min-height: 0;
+    aspect-ratio: auto;
+  }
+  .work-card--compact h3 { font-size: clamp(26px, 2.7vw, 38px); }
+  .work-card--horizontal .work-card__media--smartyard > img {
+    padding: var(--work-cover-padding);
+  }
+  .work-card--horizontal .work-card__media--millie > img {
+    width: auto;
+    height: calc(var(--work-cover-height) - 2 * var(--work-cover-padding));
+    max-width: calc(100% - 2 * var(--work-cover-padding));
+  }
 }
 
 /* Large displays pair a lead case with two compact cases on a shared grid. */
@@ -494,7 +521,8 @@ ul { list-style: none; }
   .work-pair > .work-card { grid-column:8 / span 5; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.05fr); align-items:center; gap:26px; }
   .work-pair > .work-card:first-child { grid-row:1; }
   .work-pair > .work-card:last-child { grid-row:2; }
-  .work-card--horizontal { grid-column:1 / -1; grid-row:auto; display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); align-items:center; gap:80px; margin-top:24px; padding-top:56px; border-top:1px solid var(--color-border); }
+  .work-card--horizontal { grid-column:1 / -1; grid-row:auto; display:grid; align-items:center; margin-top:24px; padding-top:56px; border-top:1px solid var(--color-border); }
+  .work-card--horizontal,.work-card--compact { grid-template-columns:minmax(0,7fr) minmax(0,5fr); gap:80px; }
   .work-list .work-card--horizontal::before { top:28px; }
   .work-section .work-card,.work-section .work-card__media { border-radius:12px; }
   .work-card--featured .work-card__media { min-height:400px; height:100%; aspect-ratio:auto; }
@@ -504,17 +532,15 @@ ul { list-style: none; }
   .work-card__media--fyn .phone-preview--first { left:8%; top:9%; }
   .work-card__media--fyn .phone-preview--second { left:53%; top:23%; }
   .work-card__media--leap > img { object-position:57% center; }
-  .work-card__media--smartyard { height:480px; aspect-ratio:auto; }
-  .work-card__media--smartyard > img { object-fit:contain; padding:32px; }
   .work-list .work-card__caption { padding-top:26px; padding-bottom:0; }
-  .work-pair .work-card__caption,.work-card--horizontal .work-card__caption { padding-top:0; }
-  .work-list .work-card h3 { font-size:40px; line-height:1.08; letter-spacing:-.045em; }
+  .work-pair .work-card__caption,.work-card--horizontal .work-card__caption,.work-card--compact .work-card__caption { padding-top:0; padding-bottom:0; }
+  .work-section .work-card h3 { font-size:40px; line-height:1.08; letter-spacing:-.045em; }
   .work-list .work-card--featured h3 { font-size:clamp(38px,2.2vw,44px); line-height:1.18; letter-spacing:-.03em; }
   .work-pair .work-card h3 { font-size:30px; }
-  .work-list .work-card__company { font-size:12px; }
-  .work-list .work-card__evidence { font-size:12px; }
-  .work-list .work-card__description { max-width:46ch; }
-  .work-list .work-card__role { margin-top:16px; font-size:12px; }
+  .work-section .work-card__company { font-size:12px; }
+  .work-section .work-card__evidence { font-size:12px; }
+  .work-section .work-card__description { max-width:46ch; }
+  .work-section .work-card__role { margin-top:16px; font-size:12px; }
   .more-work { margin-top:80px; }
 
 }
@@ -576,10 +602,6 @@ ul { list-style: none; }
   border:1px solid #ffffffc9;
   border-radius:7px;
   box-shadow:0 18px 44px -12px #33548038,0 3px 9px #33548012;
-}
-@media(min-width:1760px) {
-  .work-card__media--millie {height:540px;aspect-ratio:auto;}
-  .work-card__media--millie > img {max-width:656px;}
 }
 @media(max-width:767px) {
   .work-card__media--millie > img {width:82%;}
