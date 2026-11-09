@@ -1,0 +1,16 @@
+# Independent projects; keep them outside the portfolio repository.
+/dbt/
+/radar/
+/ritmo/
+/auditoria-make/
+/auditoria-proposta/
+
+# Local deployment copies, reviews and editor files.
+/.deployment/
+/.archive/
+/.vscode/
+.DS_Store
+*.sb-*
+node_modules/
+.env
+.env.*

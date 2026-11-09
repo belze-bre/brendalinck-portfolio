@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="624" height="548" viewBox="0 0 624 548">
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#211b58"/><stop offset="1" stop-color="#14142e"/></linearGradient>
+  <g id="card"><rect width="180" height="111" rx="6" fill="#090a18"/><path d="M37 25h132M37 32h132M12 48h156M12 55h156M12 62h156M12 69h156M12 76h156M12 83h156" stroke="#56509b" stroke-width="5"/></g></defs>
+  <rect width="624" height="548" fill="url(#bg)"/>
+  <g fill="#fff" text-anchor="middle" font-family="Arial,sans-serif">
+    <text x="312" y="77" font-size="23" font-weight="700">Different Views</text>
+    <text x="312" y="104" font-size="10.5">Choose between a Skill Tree View</text>
+    <text x="312" y="117" font-size="10.5">and a traditional one.</text>
+  </g>
+  <rect x="286" y="131" width="52" height="22" rx="11" fill="#13132d" stroke="#3e3abe" stroke-width="2"/>
+  <circle cx="298" cy="142" r="8" fill="#4842d4"/>
+  <use href="#card" x="127" y="177"/><use href="#card" x="315" y="177"/>
+  <use href="#card" x="127" y="296"/><use href="#card" x="315" y="296"/>
+  <circle cx="145" cy="202" r="13" fill="#ff5678"/><circle cx="333" cy="202" r="13" fill="#b692ff"/>
+  <circle cx="145" cy="321" r="13" fill="#5cbe66"/><circle cx="333" cy="321" r="13" fill="#ffb900"/>
+  <g fill="#d2d8e9" font-family="Arial,sans-serif" font-size="10">
+    <text x="236" y="466">Skip</text><text x="293" y="466">Back</text>
+    <rect x="337" y="449" width="55" height="27" rx="2" fill="none" stroke="#8e98b2"/>
+    <text x="348" y="466">Next →</text>
+  </g>
+</svg>

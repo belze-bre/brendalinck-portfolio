@@ -1,0 +1,35 @@
+/* The original cover composition, rebuilt from the larger product screens. */
+.leap-cover {
+  position:relative;
+  width:100%;
+  aspect-ratio:675 / 433;
+  overflow:hidden;
+  isolation:isolate;
+  container-type:inline-size;
+  background:
+    radial-gradient(ellipse at 84% 3%,#ebc6ec 0,transparent 50%),
+    radial-gradient(ellipse at 15% 90%,#a69aff 0,transparent 55%),
+    linear-gradient(130deg,#dee7f3,#e4e5ed 62%,#d8dce9);
+}
+.leap-case .leap-cover { max-width:1440px; }
+.leap-cover__panel {
+  position:absolute;
+  overflow:hidden;
+  border-radius:.65cqw;
+  background:#14142d;
+  box-shadow:0 .7cqw 1.8cqw #1c164c40;
+}
+.leap-cover__panel img {
+  position:absolute;
+  display:block;
+  height:auto;
+  max-width:none;
+  border:0;
+  border-radius:0;
+}
+.leap-cover__leaderboard { left:19.1%; top:12.2%; width:48.15%; aspect-ratio:1412 / 1117; }
+.leap-cover__leaderboard img { width:146.6714%; right:0; top:-.5372%; }
+.leap-cover__cards { left:57%; top:34%; width:23.7%; aspect-ratio:624 / 548; }
+.leap-cover__cards img { inset:0; width:100%; height:100%; }
+.leap-cover__map { left:48.3%; top:59.6%; width:23.7%; aspect-ratio:624 / 548; }
+.leap-cover__map img { width:100%; top:0; left:0; }

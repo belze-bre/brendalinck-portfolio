@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/theme.js?v=2"></script>
+  <script src="js/clarity.js?v=2" defer></script>
+  <title>Millie — Brenda Linck</title>
+  <meta name="description" content="Product design for Millie, a startup building and evolving products for developmental care.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css?v=responsive-theme-1">
+  <link rel="stylesheet" href="css/layout.css?v=responsive-theme-2">
+  <link rel="stylesheet" href="css/case-new.css?v=responsive-theme-1">
+  <link rel="stylesheet" href="css/millie.css">
+</head>
+<body class="millie-case">
+
+<header class="sidebar">
+  <a href="index.html" class="sidebar__logo">blinck</a>
+  <nav class="sidebar__nav" aria-label="Main navigation">
+    <a href="index.html#work"       class="sidebar__link">Work</a>
+    <a href="resume.html" class="sidebar__link">Resume</a>
+    <a href="index.html#about"      class="sidebar__link">About</a>
+  </nav>
+  <div class="sidebar__bottom">
+    <button class="theme-toggle" data-theme-toggle aria-label="Toggle light/dark mode" style="position:relative">
+      <svg class="theme-toggle__icon theme-toggle__icon--sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="theme-toggle__icon theme-toggle__icon--moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="main" id="main-content">
+<section class="section case-intro" aria-labelledby="millie-title">
+<a href="index.html#work" class="case-back">← All work</a>
+<div class="case-tags"><span class="case-tag">Healthcare</span><span class="case-tag">Clinical workflows</span><span class="case-tag">Startup</span></div>
+<h1 class="case-title" id="millie-title">A clearer picture<br> of every child’s care.</h1>
+<p class="case-summary">I worked with Millie, a startup developing products for developmental care, on a clinical workspace connecting child profiles, assessments, and follow-up. Millie continues to operate and evolve its products; this case presents the work from that collaboration.</p>
+<div class="case-meta-row"><div class="case-meta-item"><span class="case-meta-label">Client</span><span class="case-meta-value">Millie</span></div><div class="case-meta-item"><span class="case-meta-label">Focus</span><span class="case-meta-value">Product &amp; interaction design</span></div><div class="case-meta-item"><span class="case-meta-label">Context</span><span class="case-meta-value">Startup collaboration</span></div></div>
+</section>
+<figure class="section millie-showcase"><div class="millie-screen"><img src="images/millie/overview.png" alt="Millie dashboard with minimized navigation, a child’s care profile, development trend, and five assessed domains" width="1120" height="700" fetchpriority="high"></div><figcaption>The child’s profile anchors the overview, keeping care context and development patterns together. Prototype data is illustrative.</figcaption></figure>
+<section class="section case-cols-wide"><p class="case-section-label">The challenge</p><div class="case-col-main case-content"><h2 class="case-h2">Connecting the moments<br>between assessments.</h2><p class="case-body">A single assessment only captures one moment. Following a child’s development means moving between their history, observations, assessment results, and upcoming appointments.</p><p class="case-body">The work brings those tasks into a connected workspace: start with a child, complete an assessment in context, and return to an overview that makes patterns across domains visible.</p></div></section>
+<section class="section millie-principles"><article><span class="case-section-label">01 / Context</span><h3>Start with the child.</h3><p>Caregiver details, assessment history, and the next appointment sit alongside the profile, so the numbers stay connected to the person.</p></article><article><span class="case-section-label">02 / Continuity</span><h3>Keep the journey together.</h3><p>Assessments and appointments are linked to a child’s profile, creating clear paths between the main clinical tasks.</p></article><article><span class="case-section-label">03 / Clarity</span><h3>Make patterns visible.</h3><p>Trends and domain summaries offer different views of development, supporting a clinician’s interpretation of the results.</p></article></section>
+<section class="section"><p class="case-section-label">Assessment flow</p><h2 class="case-h2">A structured task.<br>A visible way forward.</h2><div class="case-body-cols"><p class="case-body">The assessment keeps the child’s identity visible throughout the flow. A step navigation and completion indicator help orient the user within a longer task.</p><p class="case-body">Questions use repeated response patterns, with selected answers clearly distinguished. Previous and continue actions sit together at the end of the section.</p></div></section>
+<figure class="section millie-showcase"><div class="millie-screen"><img src="images/millie/assessment.png" alt="Assessment prototype with child context, step navigation, completion progress, and radio button responses" width="1120" height="700" loading="lazy"></div><figcaption>Assessment flow · Child context, steps, and response options within one workspace.</figcaption></figure>
+<section class="section case-cols-wide"><p class="case-section-label">Care coordination</p><div class="case-col-main case-content"><h2 class="case-h2">The next step is part<br>of the same picture.</h2><p class="case-body">The schedule places assessments, follow-ups, and caregiver sessions in a weekly view. Selecting a day reveals its sessions in an adjacent agenda, while new appointments begin with an existing child profile.</p><h3 class="millie-task-title">Plan the next appointment.</h3><p class="case-body">The calendar recommends a date for the child’s next appointment, helping clinics plan follow-up proactively and keep care moving between visits.</p></div></section>
+<figure class="section millie-showcase"><div class="millie-screen"><img src="images/millie/schedule.png" alt="Weekly clinical schedule with appointments, a selected day’s agenda, and a recommended date for the child’s next appointment" width="1120" height="700" loading="lazy"></div><figcaption>Scheduling · A weekly overview, daily agenda, and a recommended date for the next appointment.</figcaption></figure>
+<section class="section case-cols-wide"><p class="case-section-label">An evolving product</p><div class="case-col-main case-content"><h2 class="case-h2">A chapter in Millie’s<br>ongoing product journey.</h2><p class="case-body">My work for Millie connected the core workflows: browsing child profiles, reviewing development information, answering assessment questions, and exploring the schedule.</p><p class="case-body">Millie remains active and continues to evolve its products. The screens shown here represent the work from our collaboration, rather than the full scope or current state of the startup’s offering.</p></div></section>
+<div class="section case-nav-row"><a href="smartyard.html" class="case-nav-card case-nav-card--left"><span class="case-nav-dir">← More work</span><span class="case-nav-name">SmartYard</span></a><a href="index.html#work" class="case-nav-card case-nav-card--center"><span class="case-nav-dir">All work</span></a><a href="role.html" class="case-nav-card"><span class="case-nav-dir">More work →</span><span class="case-nav-name">ROLE</span></a></div>
+</main><script src="js/main.js?v=responsive-theme-1" defer></script></body></html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/theme.js?v=2"></script>
+  <script src="js/clarity.js?v=2" defer></script>
+  <title>Brenda Linck — Product Designer</title>
+  <meta name="description" content="Brenda Linck is a product designer bringing research, product thinking, and visual craft to digital experiences.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css?v=responsive-theme-1">
+  <link rel="stylesheet" href="css/layout.css?v=responsive-theme-2">
+  <link rel="stylesheet" href="css/home.css?v=portrait-no-pin-5">
+  <link rel="stylesheet" href="css/student.css">
+  <link rel="stylesheet" href="css/fiero-motion.css?v=balance-cover-6">
+</head>
+<body>
+
+<!-- ── Top navigation ────────────────────────────────────────────── -->
+<header class="sidebar">
+  <a href="index.html" class="sidebar__logo">blinck</a>
+
+  <nav class="sidebar__nav" aria-label="Main navigation">
+    <a href="#work"       class="sidebar__link">Work</a>
+    <a href="resume.html" class="sidebar__link">Resume</a>
+    <a href="#about"      class="sidebar__link">About</a>
+  </nav>
+
+  <div class="sidebar__bottom">
+    <button class="theme-toggle" data-theme-toggle aria-label="Toggle light/dark mode" style="position:relative">
+      <svg class="theme-toggle__icon theme-toggle__icon--sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+      <svg class="theme-toggle__icon theme-toggle__icon--moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- ── Main ───────────────────────────────────────────────── -->
+<main class="main">
+
+  <!-- INTRODUCTION -->
+  <section class="section hero-section" id="top" aria-labelledby="home-heading">
+    <div class="hero-intro">
+      <div class="hero-identity">
+        <h1 id="home-heading" class="hero-heading">Brenda Linck</h1>
+        <div class="hero-role" data-role-rotator>
+          <span class="hero-role__accessible">Senior Product Designer, Staff Product Designer and Product Design Engineer.</span>
+          <span class="hero-role__measure" aria-hidden="true"><span>Senior Product Designer</span><span>Staff Product Designer</span><span>Product Design Engineer</span></span>
+          <span class="hero-role__visual" aria-hidden="true"><span data-role-prefix>Senior</span><span data-role-gap> </span><span>Product Design</span><span data-role-ending>er</span></span>
+          <button class="hero-role__toggle" type="button" data-role-toggle aria-label="Pause title animation" aria-pressed="false" hidden>Pause title animation</button>
+        </div>
+        <figure class="hero-quote" data-home-quote>
+          <blockquote class="hero-sub" cite="https://xanadu.com.au/ted/TN/WRITINGS/TCOMPARADIGM/tedCompOneLiners.html">
+            <p data-quote-text>“The purpose of computers is human freedom.”</p>
+          </blockquote>
+          <figcaption class="hero-quote__credit">— <span data-quote-author>Ted Nelson</span></figcaption>
+        </figure>
+      </div>
+      <div class="hero-summary">
+        <p class="hero-work">I shape product direction, prototype with AI, and build alongside engineers. From early exploration to launch, I turn what technology makes possible into experiences people can understand, trust, and use.</p>
+        <a class="hero-resume" href="resume.html">View résumé <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED WORK -->
+  <section class="section work-section" id="work" aria-labelledby="work-heading">
+    <div class="work-header">
+      <h2 id="work-heading">Selected work</h2>
+      <span>Research, product &amp; interaction</span>
+    </div>
+
+    <div class="work-list">
+      <a class="work-card work-card--featured" href="loopt.html" aria-labelledby="loopt-company loopt-title" data-work-preview>
+        <div class="work-card__media work-card__media--loopt">
+          <img src="images/home-loopt.webp" alt="Loopt operator task list shown in the context of a container terminal" width="1920" height="1080" fetchpriority="high">
+          <video class="work-card__video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" data-preview-video data-src="https://framerusercontent.com/assets/Zxi3fIWwhEFSLlxdDKDZEUShprw.mp4"></video>
+          <span class="work-card__preview-hint" aria-hidden="true"><span class="preview-play">▶</span> Workflow preview</span>
+        </div>
+        <div class="work-card__caption work-card__caption--featured">
+          <div class="work-card__heading">
+            <p class="work-card__company" id="loopt-company">Loopt Yard <span>· Operators</span></p>
+            <h3 id="loopt-title"><span>Bringing order to the container yard</span><span class="work-card__arrow" aria-hidden="true">↗</span></h3>
+          </div>
+          <div class="work-card__context">
+            <p class="work-card__description">Turning changing instructions, container positions, and complex port operations into clear next steps for operators.</p>
+            <div class="work-card__details">
+              <p class="work-card__role">Sole designer · Research, interaction &amp; interface design</p>
+              <p class="work-card__evidence"><span aria-hidden="true">↳</span> Built from scratch. In daily use since 2023.</p>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <div class="work-pair">
+        <a class="work-card" href="fyn.html" aria-labelledby="fyn-company fyn-title">
+          <div class="work-card__media work-card__media--fyn" role="img" aria-label="Nutritionist search and appointment booking screens from the redesigned healthcare platform">
+            <div class="phone-preview phone-preview--first" aria-hidden="true"><img src="images/fyn-refresh/search.png" alt="" width="393" height="1213" loading="lazy" decoding="async"></div>
+            <div class="phone-preview phone-preview--second" aria-hidden="true"><img src="images/fyn-refresh/booking.png" alt="" width="393" height="871" loading="lazy" decoding="async"></div>
+          </div>
+          <div class="work-card__caption">
+            <p class="work-card__company" id="fyn-company">Find Your Nutritionist <span>· Healthcare</span></p>
+            <h3 id="fyn-title">Breaking the conversion block <span class="work-card__arrow" aria-hidden="true">↗</span></h3>
+            <p class="work-card__description">Understanding why people browse nutritionists but leave before booking, then redesigning the journey around their needs.</p>
+            <p class="work-card__role">Research &amp; design lead · Mobile experience</p>
+            <p class="work-card__evidence"><span aria-hidden="true">↳</span> Research informed by 285 survey participants.</p>
+          </div>
+        </a>
+
+        <a class="work-card" href="leap.html" aria-labelledby="leap-company leap-title">
+          <div class="work-card__media work-card__media--leap">
+            <img src="images/leap/cover.webp?v=rebuilt-3" alt="Leap leaderboard with overlapping map and card view onboarding screens" width="2700" height="1732" loading="lazy" decoding="async">
+          </div>
+          <div class="work-card__caption">
+            <p class="work-card__company" id="leap-company">Leap / SAP Brazil <span>· Learning</span></p>
+            <h3 id="leap-title">A career worth exploring <span class="work-card__arrow" aria-hidden="true">↗</span></h3>
+            <p class="work-card__description">Making career development feel like an explorable world, with game-inspired interactions and different ways to find a path.</p>
+            <p class="work-card__role">Solo designer · Research &amp; interaction design</p>
+            <p class="work-card__evidence"><span aria-hidden="true">↳</span> Three career tracks, shaped through five testing rounds.</p>
+          </div>
+        </a>
+      </div>
+
+      <a class="work-card work-card--horizontal" href="student-plan.html" aria-labelledby="student-company student-card-title">
+        <div class="work-card__media" aria-hidden="true">
+          <div class="student-card"><span class="student-card__label">Dietbox / Student Plan · 2024</span><div class="student-card__title">More focus.<br>Fewer features.</div><span class="student-card__note">A research-led change in direction</span></div>
+        </div>
+        <div class="work-card__caption">
+          <p class="work-card__company" id="student-company">Dietbox <span>· Student Plan</span></p>
+          <h3 id="student-card-title">Making the case for fewer features <span class="work-card__arrow" aria-hidden="true">↗</span></h3>
+          <p class="work-card__description">Research that challenged a brief for more features and redirected the student experience toward the activities that mattered most.</p>
+          <p class="work-card__role">Research lead · Discovery &amp; product direction</p>
+          <p class="work-card__evidence"><span aria-hidden="true">↳</span> 30 survey responses, 100 profiles reviewed, 5 student interviews.</p>
+        </div>
+      </a>
+
+      <a class="work-card work-card--horizontal" href="role.html" aria-labelledby="role-company role-title">
+        <div class="work-card__media work-card__media--role" role="img" aria-label="Updated ROLE dashboard with six events and simplified event details">
+          <img src="images/role/dashboard-calm.png?v=grid6-3x" alt="ROLE dashboard with six events in a two-column grid" width="393" height="852" loading="lazy" decoding="async">
+          <img src="images/role/event-calm.png?v=3x" alt="Simplified ROLE event details with one primary attendance action" width="393" height="852" loading="lazy" decoding="async">
+        </div>
+        <div class="work-card__caption">
+          <p class="work-card__company" id="role-company">ROLE <span>· Local discovery</span></p>
+          <h3 id="role-title">Your city. Your next night out. <span class="work-card__arrow" aria-hidden="true">↗</span></h3>
+          <p class="work-card__description">Discovering concerts, events and parties in Porto Alegre through a mobile experience that brings the city’s cultural life together.</p>
+          <p class="work-card__role">UX/UI Designer · Mobile app</p>
+          <p class="work-card__evidence"><span aria-hidden="true">↳</span> From event discovery to deciding where to go.</p>
+        </div>
+      </a>
+
+      <a class="work-card work-card--horizontal" href="smartyard.html" aria-labelledby="smartyard-company smartyard-title">
+        <div class="work-card__media work-card__media--smartyard">
+          <img src="images/home-smartyard.svg" alt="SmartYard dashboard with machine activity, service counts and operational data" width="2160" height="1386" loading="lazy" decoding="async">
+        </div>
+        <div class="work-card__caption">
+          <p class="work-card__company" id="smartyard-company">SmartYard / Loopt <span>· Planning</span></p>
+          <h3 id="smartyard-title">The bigger picture<br>behind every move <span class="work-card__arrow" aria-hidden="true">↗</span></h3>
+          <p class="work-card__description">Giving port planners a shared view of operations, from individual container movements to the decisions that shape the entire yard.</p>
+          <p class="work-card__role">Staff UX Designer · Data, workflows &amp; design systems</p>
+          <p class="work-card__evidence"><span aria-hidden="true">↳</span> One design system across planning and operator tools.</p>
+        </div>
+      </a>
+
+      <a class="work-card work-card--horizontal" href="millie.html" aria-labelledby="millie-company millie-card-title">
+        <div class="work-card__media work-card__media--millie"><img src="images/millie/cover.png" alt="Millie’s dashboard with minimized navigation, a child profile and development overview" width="1120" height="700" loading="lazy" decoding="async"></div>
+        <div class="work-card__caption"><p class="work-card__company" id="millie-company">Millie <span>· Healthcare startup</span></p><h3 id="millie-card-title">A clearer picture of every child’s care <span class="work-card__arrow" aria-hidden="true">↗</span></h3><p class="work-card__description">Product design for Millie, connecting child profiles, developmental assessments, and follow-up in one clinical workspace.</p><p class="work-card__role">Product &amp; interaction design · Startup collaboration</p></div>
+      </a>
+    </div>
+
+    <div class="more-work">
+      <div class="work-header work-header--small"><h2>Motion &amp; visual craft</h2><button class="work-motion-toggle" type="button" data-case-motion-toggle aria-pressed="true">Pause animations</button></div>
+      <a class="work-card work-card--compact" href="bonde.html" aria-labelledby="bonde-company bonde-title">
+        <div class="work-card__media work-card__media--bonde">
+          <img src="media/bonde-illustration-motion-poster.webp" alt="Bonde’s colorful illustrated characters" width="1480" height="900" loading="lazy" decoding="async">
+          <video class="work-card__video" data-case-motion autoplay muted loop playsinline preload="auto" width="1480" height="900" poster="media/bonde-illustration-motion-poster.webp" aria-hidden="true" tabindex="-1"><source src="media/bonde-illustration-motion.mp4" type="video/mp4"></video>
+        </div>
+        <div class="work-card__caption">
+          <p class="work-card__company" id="bonde-company">Bonde <span>· Creative production</span></p>
+          <h3 id="bonde-title">Alive and on brand <span class="work-card__arrow" aria-hidden="true">↗</span></h3>
+          <p class="work-card__description">Bringing an illustrated identity to life through custom animations prepared for interaction and implementation on the web.</p>
+          <p class="work-card__role">Motion design · After Effects</p>
+          <p class="work-card__evidence"><span aria-hidden="true">↳</span> 95 animations delivered in two weeks.</p>
+        </div>
+      </a>
+
+      <a class="work-card work-card--compact" href="fiero.html" aria-labelledby="fiero-company fiero-title">
+        <div class="work-card__media work-card__media--fiero fiero-cover"><div class="fiero-device" aria-hidden="true"><div class="fiero-device__screen"><div class="fiero-cover__animation" data-fiero-animation="media/fiero/loop-quantity.json" data-still-frame="30"><img src="images/fiero/motion-cover.svg" class="fiero-cover__poster" alt=""></div></div><img class="fiero-device__frame" src="images/fiero/0-imgImage4.png" width="1400" height="2700" alt="" decoding="async"></div></div>
+        <div class="work-card__caption"><p class="work-card__company" id="fiero-company">Fiero <span>· Competition &amp; challenges</span></p><h3 id="fiero-title">Every point has a little personality <span class="work-card__arrow" aria-hidden="true">↗</span></h3><p class="work-card__description">Giving scores and friendly competition an expressive interface, with animation and small moments of feedback.</p><p class="work-card__role">Interface design · Animation &amp; microinteractions</p></div>
+      </a>
+    </div>
+
+    <!-- Early explorations hidden from the portfolio.
+    <a class="archive-teaser" href="archive.html" aria-labelledby="archive-teaser-title">
+      <div class="archive-teaser__copy">
+        <p class="archive-teaser__eyebrow">From the archive · 2021</p>
+        <h2 id="archive-teaser-title">Early explorations <span aria-hidden="true">↗</span></h2>
+        <p>Interfaces, small experiments, and a few beginnings.<br>A look back at the visual side of my early work.</p>
+        <span class="archive-teaser__link">Explore the archive <span aria-hidden="true">→</span></span>
+      </div>
+      <div class="archive-teaser__images" aria-hidden="true">
+        <img src="images/archive/wardrobe-today.png" alt="" width="375" height="812" loading="lazy" decoding="async">
+        <img src="images/archive/dashboard.png" alt="" width="1194" height="834" loading="lazy" decoding="async">
+        <img src="images/archive/lists-overview.png" alt="" width="390" height="844" loading="lazy" decoding="async">
+      </div>
+    </a>
+    -->
+  </section>
+
+  <!-- ABOUT ────────────────────────────────────────────────── -->
+  <section class="section about-section" id="about" aria-labelledby="about-heading">
+
+    <div class="about-grid">
+      <div class="about-photo" data-animate>
+        <div class="about__photo-wrap">
+          <img src="images/brenda-linck-portrait.png" alt="Brenda Linck" width="1122" height="1402">
+        </div>
+      </div>
+
+      <div class="about-content" data-animate data-animate-delay="1">
+        <h2 id="about-heading" class="about__heading">Hello!</h2>
+
+        <p class="about__bio">
+          I'm Brenda, a product designer interested in <strong>how people think, what they need, and how design can help</strong>.
+          My work spans different industries and formats, from digital products to motion and visual storytelling.
+        </p>
+
+        <p class="about__bio">
+          I like moving between the big picture and the small details: listening, making connections, trying things out,
+          and refining them with a team. Research gives me direction; experimentation helps me see what else is possible.
+          I also enjoy sharing what I learn through workshops and mentoring.
+        </p>
+
+        <div class="about__skills">
+          <span class="about__skills-label">Core strengths</span>
+          <div class="about__skills-list">
+            <span class="tag">Design Systems</span>
+            <span class="tag">Interaction Design</span>
+            <span class="tag">UX Research</span>
+            <span class="tag">Visual Design</span>
+            <span class="tag">Design Thinking</span>
+            <span class="tag">Mentorship</span>
+          </div>
+        </div>
+
+        <div class="about__skills">
+          <span class="about__skills-label">Tools</span>
+          <div class="about__skills-list">
+            <span class="tag">Figma</span>
+            <span class="tag">Framer</span>
+            <span class="tag">Storybook</span>
+            <span class="tag">ZeroHeight</span>
+            <span class="tag">Chromatic</span>
+            <span class="tag">Maze</span>
+            <span class="tag">UserTesting</span>
+            <span class="tag">Clarity</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Adobe CC</span>
+          </div>
+        </div>
+
+        <div class="about__skills">
+          <span class="about__skills-label">Languages</span>
+          <p class="about__bio">Communicating freely in Portuguese and English.<br>Surviving in French, German and Spanish.</p>
+        </div>
+
+        <a href="resume.html" class="btn btn--ghost">
+          Explore résumé ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CONTACT / CTA ────────────────────────────────────────── -->
+  <footer class="section cta-section" id="contact">
+    <div class="cta-content" data-animate>
+      <h2 class="cta-heading">Let's make something thoughtful.</h2>
+      <p class="cta-sub">
+        Have a project in mind, an opportunity to share, or a question about my work?
+        I'd love to hear from you and see where the conversation goes.
+      </p>
+      <div class="cta-actions">
+        <button class="btn btn--ghost" data-copy-email="brenda.linck@gmail.com">Copy email</button>
+      </div>
+    </div>
+    <div class="cta-footer-bar">
+      <span>© 2026 Brenda Linck</span>
+      <span>Brussels</span>
+    </div>
+  </footer>
+
+</main>
+
+<script src="js/main.js?v=responsive-theme-1" defer></script>
+<script src="js/home.js" defer></script>
+<script src="js/case-motion.js?v=reduced-motion-3" defer></script>
+<script src="js/vendor/lottie-light-5.12.2.min.js" defer></script>
+<script src="js/fiero-motion.js?v=login-media-4" defer></script>
+</body>
+</html>

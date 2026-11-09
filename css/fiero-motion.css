@@ -1,0 +1,84 @@
+/* The original animation is the focus of the Fiero cover. */
+.fiero-cover{position:relative;isolation:isolate;overflow:hidden;background:#211e25;color:#f8f4fb;container-type:inline-size}
+.fiero-cover--hero{width:calc(100% - 120px);max-width:1320px;aspect-ratio:16/8;margin:48px auto 0;border-radius:12px}
+.fiero-device{position:absolute;left:50%;top:50%;height:96%;aspect-ratio:1400/2700;transform:translate(-50%,-50%);pointer-events:none;isolation:isolate}
+.fiero-device__screen{position:absolute;left:7.391%;top:2.3%;width:85.214%;height:95.62%;border-radius:6%;overflow:hidden;background:#1d191d}
+.fiero-cover .fiero-device img{display:block;max-width:none;max-height:none;border:0;border-radius:0;transform:none;box-shadow:none;pointer-events:none}
+.fiero-cover .fiero-device__frame{position:absolute;inset:0;width:100%;height:100%;z-index:2;object-fit:fill}
+.fiero-login-overlay{position:absolute;left:4%;top:6.4%;width:92%;height:44%;background:#1d191d;pointer-events:none}
+.fiero-cover__animation svg,.fiero-cover__poster{display:block;width:100%;height:100%;object-fit:contain}
+.fiero-cover__poster{position:absolute;inset:0}
+.fiero-cover__animation.is-loaded .fiero-cover__poster{opacity:0}
+.fiero-cover__caption{position:absolute;left:7%;bottom:7%;font-size:11px;letter-spacing:.04em;color:#c6bece}
+.fiero-cover__toggle{position:absolute;right:5%;bottom:5%;z-index:2;padding:12px 18px;border:1px solid #ffffff35;border-radius:24px;min-height:44px;background:#211e25;color:#f8f4fb;font:inherit;font-size:12px;cursor:pointer}
+.fiero-cover__toggle:hover{border-color:#ffffff90}
+.work-card__media--fiero.fiero-cover{display:block;padding:0;background:#211e25}
+.work-card__media--fiero .fiero-cover__animation img{width:100%;height:100%;max-height:none;border-radius:0;transform:none;box-shadow:none}
+.project-media--fiero.fiero-cover{display:block;padding:0;background:#211e25}
+.project-media--fiero .fiero-device{top:40%;height:78%}
+.project-card--fiero::after{background:linear-gradient(transparent 55%,#131116b3)}
+@media(max-width:1399px){.fiero-cover--hero{width:calc(100% - 96px)}}
+@media(max-width:767px){
+ .fiero-cover--hero{width:100%;border-radius:0;aspect-ratio:1;margin-top:32px}
+ .fiero-cover--hero .fiero-device{top:50%;height:92%}
+ .fiero-cover__caption{font-size:9px}
+ .fiero-cover__toggle{font-size:11px;padding:10px 12px}
+ .project-media--fiero .fiero-device{top:31%;height:58%}
+}
+.fiero-micro__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:40px}
+.fiero-micro__grid figure{min-width:0;background:#26222d;border-radius:12px;overflow:hidden;color:#f6f1f8}
+.fiero-micro__canvas{aspect-ratio:1;width:100%}
+.fiero-micro__canvas svg{width:100%;height:100%;display:block}
+.fiero-micro__canvas--loading{padding:12%}
+.fiero-micro__grid figcaption{padding:0 24px 28px}
+.fiero-micro__grid figcaption span,.fiero-flow figcaption span{font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.fiero-micro__grid figcaption p,.fiero-flow figcaption p{font-size:14px;line-height:1.6;margin-top:10px}
+.fiero-micro__grid figcaption p{color:#c9c1d1}
+.fiero-flows__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 28px;margin-top:40px}
+.fiero-flow{min-width:0}
+.fiero-flow__screen{display:flex;justify-content:center;background:#ddd7ea;border-radius:12px;padding:28px}
+.fiero-flow video{display:block;width:100%;max-width:280px;aspect-ratio:1170/2532;object-fit:contain;background:#1d1b1e;border-radius:20px}
+.fiero-flow figcaption{padding-top:18px}
+.fiero-flow figcaption p{color:var(--color-text-muted)}
+.fiero-flow__playback{display:block;margin-top:14px;padding:8px 0;border:0;background:none;color:var(--color-text);font:inherit;font-size:12px;text-decoration:underline;text-underline-offset:4px;cursor:pointer;min-height:40px}
+.fiero-login-motion{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center;margin-top:40px;padding:40px;border-radius:12px;background:#171419;color:#f6f1f8}
+.fiero-login-motion__canvas{position:relative;aspect-ratio:1080/1064;min-width:0}
+.fiero-login-motion__canvas svg{display:block;width:100%;height:100%}
+.fiero-login-motion__canvas video{display:block;width:100%;height:100%;object-fit:contain}
+.fiero-login-motion__poster{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.fiero-login-motion__canvas.is-loaded .fiero-login-motion__poster{display:none}
+.fiero-login-motion h3{font-size:clamp(24px,3vw,40px);font-weight:500;line-height:1.2;margin:16px 0}
+.fiero-login-motion p{max-width:340px;font-size:16px;line-height:1.6;color:#c9c1d1}
+.fiero-login-motion .case-section-label{color:#c9c1d1}
+.fiero-login-motion .fiero-characters__playback{margin-top:24px;color:#f6f1f8;border-color:#766d7e}
+.fiero-flows__more{margin-top:40px;border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border);padding:20px 0}
+.fiero-flows__more summary{font-size:14px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;min-height:44px}
+.fiero-flows__more summary::-webkit-details-marker{display:none}
+.fiero-flows__more summary span{font-size:24px}
+.fiero-flows__more[open] summary span{transform:rotate(45deg)}
+.fiero-flows__more .fiero-flows__grid{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:20px}
+.fiero-flows__more .fiero-flow__screen{padding:16px}
+@media(max-width:900px){.fiero-flows__more .fiero-flows__grid{grid-template-columns:repeat(2,minmax(0,1fr))}.fiero-flow__screen{padding:16px}}
+@media(max-width:767px){
+ .fiero-login-motion{grid-template-columns:1fr;gap:28px;padding:24px;margin-top:24px}
+ .fiero-micro__grid,.fiero-flows__grid{grid-template-columns:1fr;gap:24px}
+ .fiero-micro__canvas{max-width:400px;margin:auto}
+ .fiero-flow__screen{padding:28px}
+ .fiero-flows__more .fiero-flows__grid{grid-template-columns:1fr}
+ .fiero-flows__more .fiero-flow__screen{padding:28px}
+}
+
+/* Original login motion, aligned to the welcome screen. */
+.fiero-phone__login-screen{position:absolute;left:6.847%;top:2.19%;width:85.468%;height:95.826%;border-radius:5%;overflow:hidden}
+.fiero-phone .fiero-phone__login-screen>img{position:absolute;inset:0;width:100%;height:100%;object-fit:fill}
+.fiero-phone__login-screen .fiero-login-overlay{z-index:1}
+.fiero-gallery__crop{position:relative;overflow:hidden;aspect-ratio:318.3865/696.1612;width:100%;max-width:322px}
+.fiero-gallery__crop img{position:absolute;left:-6.218%;top:-2.37%;width:112.436%;max-width:none!important;height:auto}
+
+.fiero-login-overlay{isolation:isolate;overflow:hidden}
+.fiero-login-overlay__video{display:block;width:100%;height:100%;object-fit:fill;mix-blend-mode:screen}
+.fiero-gallery__artwork{position:relative;container-type:inline-size;width:100%;max-width:322px}
+.fiero-gallery__emoji{position:absolute;display:grid;place-items:center;font-family:"Apple Color Emoji","Segoe UI Emoji",sans-serif;font-weight:400;line-height:1}
+
+/* Cover: give the balancing elements more room inside the device. */
+.fiero-cover .fiero-device__screen .fiero-cover__animation{position:absolute;left:-8%;top:50%;width:116%;height:auto;aspect-ratio:920/1080;transform:translateY(-50%);pointer-events:none}

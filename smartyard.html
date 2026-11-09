@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/theme.js?v=2"></script>
+  <script src="js/clarity.js?v=2" defer></script>
+  <title>Logic Behind the Lift — Brenda Linck</title>
+  <meta name="description" content="Designing a shared operational picture for container terminals: 20+ interviews, connected export planning and clearer decisions across the yard.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css?v=responsive-theme-1">
+  <link rel="stylesheet" href="css/layout.css?v=responsive-theme-2">
+  <link rel="stylesheet" href="css/case-new.css?v=responsive-theme-1">
+  <link rel="stylesheet" href="css/smartyard.css?v=english-review-2">
+</head>
+<body>
+
+<header class="sidebar">
+  <a href="index.html" class="sidebar__logo">blinck</a>
+  <nav class="sidebar__nav">
+    <a href="index.html#work"       class="sidebar__link">Work</a>
+    <a href="resume.html" class="sidebar__link">Resume</a>
+    <a href="index.html#about"      class="sidebar__link">About</a>
+  </nav>
+  <div class="sidebar__bottom">
+    <button class="theme-toggle" data-theme-toggle aria-label="Toggle light/dark mode" style="position:relative">
+      <svg class="theme-toggle__icon theme-toggle__icon--sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="theme-toggle__icon theme-toggle__icon--moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="main smartyard-case">
+
+  <section class="section case-intro" id="analogy" aria-labelledby="case-title" data-animate>
+    <a href="index.html" class="case-back">← All work</a>
+    <div class="case-tags"><span class="case-tag">UX Research</span><span class="case-tag">Enterprise</span><span class="case-tag">Maritime Logistics</span></div>
+    <h1 class="case-title" id="case-title">Logic Behind the Lift</h1>
+    <p class="sy-kicker">A shared picture for the people moving global trade</p>
+    <div class="sy-analogy">
+      <p class="sy-analogy__lead">Imagine solving a giant, time-critical puzzle.<br><span>You cannot see all the pieces.</span></p>
+      <div class="sy-analogy__bottom">
+        <p>And the people moving them are in another room, waiting for your instructions.</p>
+        <div class="sy-puzzle" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+    </div>
+    <p class="case-summary sy-intro-copy">That is the coordination challenge inside a container terminal. I designed SmartYard to give planners and field teams a shared view of what was arriving, what needed to move, and what had to happen next.</p>
+    <div class="case-meta-row">
+      <div class="case-meta-item"><span class="case-meta-label">Company</span><span class="case-meta-value">Loopt</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Role</span><span class="case-meta-value">Staff UX Designer</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Timeline</span><span class="case-meta-value">2023–2024</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Clients</span><span class="case-meta-value">Maersk · Ecoporto</span></div>
+    </div>
+    <nav class="sy-chapters" aria-label="Case study sections"><a href="#global-operation">The operation ↓</a><a href="#fragmented-data">The challenge ↓</a><a href="#research">Research ↓</a><a href="#interfaces">Interfaces ↓</a></nav>
+  </section>
+
+  <figure class="sy-hero" id="dashboard" data-animate>
+    <a href="images/smartyard-reviewed/yard-overview.png" target="_blank" rel="noopener" aria-label="Open the English yard overview at full resolution"><img src="images/smartyard-reviewed/yard-overview.png" alt="English SmartYard interface showing service tasks and container moves by yard block, with stacker assignments below" width="3456" height="2258" fetchpriority="high" decoding="async"></a>
+    <figcaption>One operational picture, from yard activity to equipment assignments. <span>English review of the original interface · <a href="images/smartyard-reviewed/yard-overview.png" target="_blank" rel="noopener">View full resolution ↗</a></span></figcaption>
+  </figure>
+
+  <div class="section case-numbers" id="at-a-glance" data-animate>
+    <div class="case-number-card"><span class="case-number">20+</span><span class="case-number-desc">interviews across operational and planning roles</span></div><div class="case-number-divider"></div>
+    <div class="case-number-card"><span class="case-number">R$70k</span><span class="case-number-desc">reported monthly savings per client</span></div><div class="case-number-divider"></div>
+    <div class="case-number-card"><span class="case-number">Live</span><span class="case-number-desc">in terminal operations in Brazil</span></div>
+  </div>
+
+  <section class="section" id="global-operation" aria-labelledby="operation-heading" data-animate>
+    <p class="case-section-label">The operation</p>
+    <h2 class="case-h2" id="operation-heading">One yard. A much larger chain of decisions.</h2>
+    <div class="case-body-cols"><p class="case-body">A shipping container can travel from a factory by road or rail, pass through an export terminal, cross an ocean on a vessel, and enter another terminal before continuing inland. The same steel unit connects manufacturers, shipping lines, customs authorities, terminal teams and inland carriers across countries.</p><p class="case-body">Inside the yard, containers are stacked in designated blocks and moved by heavy equipment. <strong>Their position has to account for vessel schedules, cargo cut-offs, customs release, inspections and collection appointments.</strong> Refrigerated cargo also needs powered storage. An inaccessible container can force extra lifts; a missed deadline can disrupt the next leg of its journey.</p></div>
+    <figure class="sy-global-flow"><ol aria-label="An illustrative export and import journey"><li><span class="sy-route-icon" aria-hidden="true">01</span><strong>Origin</strong><p>Factory or warehouse<br>Road / rail transport</p></li><li class="sy-route-terminal"><span class="sy-route-icon" aria-hidden="true">02</span><strong>Export terminal</strong><p>Receive · inspect · stack<br>Prepare for vessel loading</p></li><li><span class="sy-route-icon" aria-hidden="true">03</span><strong>Ocean crossing</strong><p>Vessel departure<br>International shipping</p></li><li class="sy-route-terminal"><span class="sy-route-icon" aria-hidden="true">04</span><strong>Import terminal</strong><p>Discharge · store · release<br>Coordinate collection</p></li><li><span class="sy-route-icon" aria-hidden="true">05</span><strong>Inland destination</strong><p>Road / rail transport<br>Next supply chain stage</p></li></ol><figcaption>Illustrative container journey. SmartYard focuses on the terminal: where shipment plans become physical movements.</figcaption></figure>
+    <p class="sy-source">Operational context: <a href="https://downloads.eu.ctfassets.net/jchk06tdml2i/6cNC43LRkzR4ecW7HT1Bjn/c1eefb13b0c96af883839eb7d09c56dd/GardGuidanceContainers_optimised3.pdf" target="_blank" rel="noopener">Gard · Container terminal operations ↗</a></p>
+  </section>
+
+  <section class="section" id="fragmented-data" aria-labelledby="fragmented-heading" data-animate>
+    <p class="case-section-label">The problem</p>
+    <h2 class="case-h2" id="fragmented-heading">The yard was connected.<br>The information was not.</h2>
+    <p class="case-body case-body--wide">The existing tools did not bring the operation together. Data lived in spreadsheets, in people's heads, and in walkie-talkie conversations. Planners had to reconstruct the picture before they could decide what to do.</p>
+    <figure class="sy-fragmentation">
+      <div class="sy-data-sources">
+        <article class="sy-source-card"><div class="sy-sheet" aria-hidden="true"><span>CONTAINER</span><span>ARRIVAL</span><span>STATUS</span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>In spreadsheets</h3><p>Arrival lists, schedules and separate versions of the plan.</p></article>
+        <article class="sy-source-card"><div class="sy-memory" aria-hidden="true"><span>That container<br>still needs inspection.</span><i></i><i></i><i></i></div><h3>In people's heads</h3><p>Exceptions and experience that stayed with the person who knew.</p></article>
+        <article class="sy-source-card"><div class="sy-radio" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>Over the radio</h3><p>Spoken updates that another shift could not look up later.</p></article>
+      </div>
+      <div class="sy-data-gap"><span>Separate fragments</span><i aria-hidden="true"></i><strong>No shared operational picture</strong></div>
+      <figcaption>Schematic based on the research findings: information existed, but it was scattered across people and channels.</figcaption>
+    </figure>
+    <div class="sy-guess" id="educated-guess"><span class="case-section-label">The cost of that fragmentation</span><p>Every decision was<br><em>an educated guess.</em></p><span>Which container moves first? Which stacker is available? What will arrive next?</span></div>
+  </section>
+
+  <section class="section sy-mission" id="mission" aria-labelledby="mission-heading" data-animate><p class="case-section-label">The mission</p><h2 id="mission-heading">Give the people coordinating the yard one shared source of truth.</h2><p class="case-body">The goal was to make the next decision clearer: the right information, at the moment someone needed to act. That meant understanding how a plan moved between the office and the field.</p></section>
+
+  <section class="section" id="research" aria-labelledby="research-heading" data-animate>
+    <p class="case-section-label">Research</p><h2 class="case-h2" id="research-heading">20+ interviews.<br>Four perspectives on the same yard.</h2>
+    <div class="case-body-cols"><p class="case-body">I interviewed people across the operational chain, from yard checkers recording individual movements to senior planners coordinating terminal strategy. The research also informed the <a href="loopt.html">driver-facing tablet product</a>.</p><p class="case-body">Field teams knew the detail of a particular container or task. Managers and planners needed to understand what that detail meant for the whole terminal. <strong>Each role held part of the picture, and each depended on information from the others.</strong></p></div>
+    <div class="case-methods-grid sy-roles">
+      <div class="case-method"><span class="case-method__num">01</span><h3 class="case-method__title">Yard checkers</h3><p class="case-method__desc">Record container arrivals, departures and repositioning. Closest to the physical operation, but with limited visibility into the wider plan.</p></div>
+      <div class="case-method"><span class="case-method__num">02</span><h3 class="case-method__title">Operations managers</h3><p class="case-method__desc">Coordinate teams across yard operations, security, customs and container release. Depend on accurate updates from the field.</p></div>
+      <div class="case-method"><span class="case-method__num">03</span><h3 class="case-method__title">Yard planners</h3><p class="case-method__desc">Decide where containers should be positioned and when they should move. Need to connect expected arrivals, available space and planned departures.</p></div>
+      <div class="case-method"><span class="case-method__num">04</span><h3 class="case-method__title">Master planners</h3><p class="case-method__desc">Balance terminal capacity with vessel schedules, customer agreements, refrigerated cargo needs and collection windows.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="findings" aria-labelledby="findings-heading" data-animate>
+    <p class="case-section-label">What the research changed</p><h2 class="case-h2" id="findings-heading">Bring the current operation and the next decision into the same view.</h2>
+    <p class="case-body case-body--wide">The information gap created work of its own. To share a container photo, a field worker had to return a company device to the office, download the image to a network folder, rename it and send it by email. Even a basic update could require several people and tools.</p>
+    <div class="case-decision-list">
+      <div class="case-decision-item"><div class="case-decision-item__q">Expected arrivals</div><div class="case-decision-item__a"><h3>What is coming in, and what space will it need?</h3><p>Connect expected volumes and arrival plans with the containers already in the yard. Planners need to prepare the terminal before the next movement becomes urgent.</p></div></div>
+      <div class="case-decision-item" id="dwell-time"><div class="case-decision-item__q">Time in the yard</div><div class="case-decision-item__a"><h3>How long has this container been waiting?</h3><p><strong>Dwell time is the time a container spends in the terminal.</strong> A dwell-time projection estimates how long it is expected to stay. The planning need was to make that waiting time visible alongside collection dates, so teams could spot containers approaching an agreed window and act before delays accumulated.</p><p>Elapsed time, an estimated departure and a contractual deadline answer different questions. They should be labelled separately, rather than compressed into an unexplained “dwell” metric.</p></div></div>
+      <div class="case-decision-item"><div class="case-decision-item__q">Collection planning</div><div class="case-decision-item__a"><h3>Position the container for its next move.</h3><p>Knowing when a container is likely to leave helps planners choose an accessible position. This was an opportunity to bring Loopt's recommendations into the planning workflow and reduce unnecessary rehandling.</p></div></div>
+      <div class="case-decision-item"><div class="case-decision-item__q">Task status</div><div class="case-decision-item__a"><h3>What is blocked, and who needs to act?</h3><p>Keep the container, task, assigned equipment, timing and operational notes together. A status is useful when the planner can understand the exception and coordinate the next action.</p></div></div>
+    </div>
+    <p class="sy-source">Terminology: <a href="https://sft-framework.unctad.org/key-performance-indicator/maritime-average-container-dwell-time" target="_blank" rel="noopener">UNCTAD · Container dwell time ↗</a></p>
+  </section>
+
+  <section class="section" id="interfaces" aria-labelledby="interfaces-heading" data-animate>
+    <p class="case-section-label">The interfaces</p><h2 class="case-h2" id="interfaces-heading">Follow a plan from expected cargo to work in the yard.</h2>
+    <div class="case-body-cols"><p class="case-body">The export-planning views bring voyage volumes, bookings and deadlines together. The operational views show how yard activity is distributed and which equipment is assigned to each container task.</p><p class="case-body">The screens below come from the original editable designs. <strong>This portfolio review adds English localisation and small clarity improvements.</strong> The charts, components and core layouts are preserved; the refinements are not presented as new production outcomes. Figures shown in the interfaces are design sample data.</p></div>
+  </section>
+
+  <section class="section sy-screen-section" id="planning" aria-labelledby="planning-heading" data-animate>
+    <div class="sy-screen-heading"><span>01 / Before arrival</span><h2 class="case-h2" id="planning-heading">Understand what the terminal needs to prepare for.</h2><p class="case-body">Compare booked and forecast cargo volumes by voyage and loading port, alongside the cut-off and gate movements. Gate-in means a container has entered the terminal; gate-out means it has left.</p></div>
+    <figure class="sy-screen"><a href="images/smartyard-reviewed/export-planning-v2.png" target="_blank" rel="noopener" aria-label="Open the export planning interface at full resolution"><img src="images/smartyard-reviewed/export-planning-v2.png" alt="English export planning table with loading ports, cargo cut-off dates, bookings, forecasts and gate movements" width="2880" height="1876" loading="lazy" decoding="async"></a><figcaption><strong>Export planning.</strong> The table uses balanced column widths, consistent padding and wrapped headings. Forecast is a plain heading, with emphasis kept on the values. “Loading port” and “Discharge port” replace the abbreviations; the cut-off uses a readable date. Negative cut-off days indicate days before the deadline. <a href="images/smartyard-reviewed/export-planning-v2.png" target="_blank" rel="noopener">View full resolution ↗</a></figcaption></figure>
+  </section>
+
+  <section class="section sy-screen-section" id="forecast" aria-labelledby="forecast-heading" data-animate>
+    <div class="sy-screen-heading"><span>02 / As the deadline approaches</span><h2 class="case-h2" id="forecast-heading">See how expected volumes change over time.</h2><p class="case-body">Compare bookings and forecasts with historical booking patterns as the cargo cut-off approaches. This gives planners context for the workload they may need to accommodate.</p></div>
+    <figure class="sy-screen"><a href="images/smartyard-reviewed/export-forecast.png" target="_blank" rel="noopener" aria-label="Open the volume forecast interface at full resolution"><img src="images/smartyard-reviewed/export-forecast.png" alt="English shipment forecast chart with an axis counting down from thirty days before the cargo cut-off" width="2880" height="2072" loading="lazy" decoding="async"></a><figcaption><strong>Volume forecast.</strong> The time axis now reads “30 days before” through “Cut-off”, replacing the unexplained “DDL” labels. <a href="images/smartyard-reviewed/export-forecast.png" target="_blank" rel="noopener">View full resolution ↗</a></figcaption></figure>
+  </section>
+
+  <section class="section sy-screen-section" id="yard-overview" aria-labelledby="yard-heading" data-animate>
+    <div class="sy-screen-heading"><span>03 / Across the yard</span><h2 class="case-h2" id="yard-heading">Connect the workload with the equipment.</h2><p class="case-body">Compare service tasks and physical container moves across yard blocks, then see the stackers assigned to those areas. A stacker is the heavy equipment used to lift and reposition containers.</p></div>
+    <figure class="sy-screen"><a href="images/smartyard-reviewed/yard-overview.png" target="_blank" rel="noopener" aria-label="Open the yard overview interface at full resolution"><img src="images/smartyard-reviewed/yard-overview.png" alt="SmartYard English yard overview: activity by yard block, service and move counts, active stackers and equipment assignments" width="3456" height="2258" loading="lazy" decoding="async"></a><figcaption><strong>Yard overview.</strong> “Quadras” becomes “Yard blocks”; “Movimentos” becomes “Moves”; equipment is identified as “Active stackers”. <a href="images/smartyard-reviewed/yard-overview.png" target="_blank" rel="noopener">View full resolution ↗</a></figcaption></figure>
+  </section>
+
+  <section class="section sy-screen-section" id="service-queue" aria-labelledby="service-heading" data-animate>
+    <div class="sy-screen-heading"><span>04 / At task level</span><h2 class="case-h2" id="service-heading">Make the next action easier to coordinate.</h2><p class="case-body">The service queue keeps each container task next to its status, assigned stacker, timing, yard position and notes. Inspection, loading and unloading each carry their own requirements and dependencies.</p></div>
+    <figure class="sy-screen"><a href="images/smartyard-reviewed/service-queue.png" target="_blank" rel="noopener" aria-label="Open the container service queue at full resolution"><img src="images/smartyard-reviewed/service-queue.png" alt="English container service queue showing task status, equipment, task dates, estimated start times, yard positions and notes, with a text cue on the pink timing exception" width="3456" height="1992" loading="lazy" decoding="async"></a><figcaption><strong>Service queue.</strong> “Est. start” clarifies the predicted time, dates use month names, and the highlighted time includes “Check” alongside the colour cue. <a href="images/smartyard-reviewed/service-queue.png" target="_blank" rel="noopener">View full resolution ↗</a></figcaption></figure>
+  </section>
+
+  <section class="section" id="interface-refinements" aria-labelledby="refinements-heading" data-animate>
+    <p class="case-section-label">A closer look</p><h2 class="case-h2" id="refinements-heading">Small changes that make the same information easier to read.</h2>
+    <div class="sy-refinements"><article><span>Language</span><h3>Use the team's vocabulary.</h3><p>“Yard blocks”, “Unloading”, “Queued” and “Yard position” describe terminal work. “Unstuffing” means removing cargo from a container.</p></article><article><span>Time</span><h3>Distinguish a forecast from a recorded event.</h3><p>“Est. start” names the estimate. “03 Jun 2024” removes date-format ambiguity. The chart explains its countdown to the cut-off.</p></article><article><span>Exceptions</span><h3>Give colour a text cue.</h3><p>The highlighted start time carries “Check”. The queue still needs an explicit exception reason and owner before this refinement could be considered complete for production.</p></article></div>
+  </section>
+
+  <section class="section" id="shared-system" data-animate><p class="case-section-label">Two products, one system</p><h2 class="case-h2">The office and the field need the same operational truth.</h2><div class="case-body-cols"><p class="case-body">SmartYard and the <a href="loopt.html">driver-facing tablet</a> emerged from the same research. One helps planners coordinate the terminal; the other helps an operator carry out the next task in the yard.</p><p class="case-body">Both shared the OCTO TOKENS design system: colours, spacing and component patterns. <strong>Designing them together connected the planning view with the people doing the physical work.</strong></p></div></section>
+
+  <section class="section" id="outcome" data-animate><p class="case-section-label">Outcome</p><h2 class="case-h2">Better positioning starts with a clearer picture.</h2><div class="case-body-cols"><p class="case-body">SmartYard was adopted in terminal operations serving Maersk and Ecoporto in Brazil. The dashboard brought planning and yard information into a shared view, giving teams a clearer basis for coordinating container movements.</p><p class="case-body">The project reported <strong>R$70,000 in monthly savings per client</strong> through fewer unnecessary container moves. When the next step is visible, planners can position a container for that step and reduce the need to lift it again just to reach another one.</p></div></section>
+
+  <!-- NAVIGATION -->
+  <div class="section case-nav-row" data-animate>
+    <a href="loopt.html" class="case-nav-card case-nav-card--left"><span class="case-nav-dir">← Previous</span><span class="case-nav-name">Operator's Seat</span></a>
+    <a href="index.html#work" class="case-nav-card case-nav-card--center"><span class="case-nav-dir">All work</span></a>
+    <a href="leap.html" class="case-nav-card case-nav-card--right"><span class="case-nav-dir">Next →</span><span class="case-nav-name">Career Progression Experience</span></a>
+  </div>
+
+</main>
+<script src="js/main.js?v=responsive-theme-1" defer></script>
+</body>
+</html>

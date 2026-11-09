@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/theme.js?v=2"></script>
+  <script src="js/clarity.js?v=2" defer></script>
+  <title>Archive — Brenda Linck</title>
+  <meta name="description" content="A small collection of Brenda Linck’s early interface explorations, from everyday mobile apps to data dashboards.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css?v=responsive-theme-1">
+  <link rel="stylesheet" href="css/layout.css?v=responsive-theme-2">
+  <link rel="stylesheet" href="css/archive.css">
+</head>
+<body>
+  <a class="skip-link" href="#archive">Skip to gallery</a>
+  <header class="sidebar">
+    <a href="index.html" class="sidebar__logo">blinck</a>
+    <nav class="sidebar__nav" aria-label="Main navigation">
+      <a href="index.html#work" class="sidebar__link">Work</a>
+      <a href="resume.html" class="sidebar__link">Resume</a>
+      <a href="index.html#about" class="sidebar__link">About</a>
+    </nav>
+    <div class="sidebar__bottom">
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle light/dark mode" type="button">
+        <svg class="theme-toggle__icon theme-toggle__icon--sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="theme-toggle__icon theme-toggle__icon--moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="main" id="archive">
+    <section class="section archive-intro" aria-labelledby="archive-heading">
+      <a class="back-link" href="index.html#work"><span aria-hidden="true">←</span> Selected work</a>
+      <div class="archive-intro__row">
+        <div><p class="eyebrow">Archive / 2021</p><h1 id="archive-heading">Early explorations<span aria-hidden="true">.</span></h1></div>
+        <p class="archive-intro__description">A few beginnings, kept here.<br>A collection of early interface work exploring everyday routines, visual language, and ways to make information feel clear.</p>
+      </div>
+      <nav class="archive-index" aria-label="Archive projects">
+        <a href="#wardrobe"><span>01</span> Digital wardrobe</a>
+        <a href="#dashboard"><span>02</span> Resource dashboard</a>
+        <a href="#lists"><span>03</span> Shared lists</a>
+      </nav>
+    </section>
+
+    <section class="section archive-project" id="wardrobe" aria-labelledby="wardrobe-heading">
+      <div class="project-heading">
+        <div class="project-heading__title"><span class="project-number">01</span><div><p class="eyebrow">2021 · Mobile interface exploration</p><h2 id="wardrobe-heading">A little less “what to wear?”</h2></div></div>
+        <p>A digital wardrobe for putting outfits together, organizing clothes, and finding inspiration for the day. A study in playful visuals and everyday interactions.</p>
+      </div>
+      <div class="screen-stage screen-stage--wardrobe">
+        <a href="images/archive/wardrobe-today.png" data-gallery="wardrobe" data-project="Digital wardrobe" data-caption="Today’s outfit suggestions" class="screen-link" aria-label="Enlarge digital wardrobe: today’s outfit suggestions">
+          <img src="images/archive/wardrobe-today.png" alt="Weather-based outfit suggestions with a purple background and an illustrated winter look" width="375" height="812" fetchpriority="high"><span class="screen-link__zoom" aria-hidden="true">↗</span>
+        </a>
+        <a href="images/archive/wardrobe-outfit.png" data-gallery="wardrobe" data-project="Digital wardrobe" data-caption="Combining an outfit" class="screen-link" aria-label="Enlarge digital wardrobe: combining an outfit">
+          <img src="images/archive/wardrobe-outfit.png" alt="Outfit builder combining a black top, jeans, accessories, and sneakers" width="375" height="812" decoding="async"><span class="screen-link__zoom" aria-hidden="true">↗</span>
+        </a>
+        <a href="images/archive/wardrobe-board.png" data-gallery="wardrobe" data-project="Digital wardrobe" data-caption="The outfit whiteboard" class="screen-link" aria-label="Enlarge digital wardrobe: the outfit whiteboard">
+          <img src="images/archive/wardrobe-board.png" alt="A whiteboard of clothing and accessories arranged into a look" width="375" height="812" decoding="async"><span class="screen-link__zoom" aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <div class="project-footnote"><p>Digital wardrobe · 5 screens <span>Click a screen to explore</span></p><div class="detail-links">
+        <a href="images/archive/wardrobe-garment.png" data-gallery="wardrobe" data-project="Digital wardrobe" data-caption="Garment preview">Garment preview ↗</a>
+        <a href="images/archive/wardrobe-details.png" data-gallery="wardrobe" data-project="Digital wardrobe" data-caption="Outfit filters">Outfit filters ↗</a>
+      </div></div>
+    </section>
+
+    <section class="section archive-project" id="dashboard" aria-labelledby="dashboard-heading">
+      <div class="project-heading">
+        <div class="project-heading__title"><span class="project-number">02</span><div><p class="eyebrow">2021 · Desktop interface exploration</p><h2 id="dashboard-heading">Following every ingredient.</h2></div></div>
+        <p>A dashboard connecting raw materials, their destinations, and reuse over time. Exploring how tables, charts, and color can bring different views of a process together.</p>
+      </div>
+      <div class="screen-stage screen-stage--dashboard">
+        <a href="images/archive/dashboard.png" data-gallery="dashboard" data-project="Resource dashboard" data-caption="Recipe process and resource reuse" class="screen-link" aria-label="Enlarge resource dashboard">
+          <img src="images/archive/dashboard.png" alt="Dark green recipe dashboard showing orange pulp, skin, and pomace usage in a table, line chart, and ring chart" width="1194" height="834" loading="lazy" decoding="async"><span class="screen-link__zoom" aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <div class="project-footnote"><p>Resource dashboard · 1 screen <span>Click to take a closer look</span></p><span>Data visualization / Dark UI</span></div>
+    </section>
+
+    <section class="section archive-project" id="lists" aria-labelledby="lists-heading">
+      <div class="project-heading">
+        <div class="project-heading__title"><span class="project-number">03</span><div><p class="eyebrow">2021 · Mobile interface exploration</p><h2 id="lists-heading">A place for everyone’s lists.</h2></div></div>
+        <p>Personal and shared lists, from the weekly shop to planning with others. Exploring colorful categories, item management, and collaboration in a dark interface.</p>
+      </div>
+      <div class="screen-stage screen-stage--lists">
+        <a href="images/archive/lists-overview.png" data-gallery="lists" data-project="Shared lists" data-caption="Personal and collaborative lists" class="screen-link" aria-label="Enlarge shared lists: overview">
+          <img src="images/archive/lists-overview.png" alt="Colorful cards for personal and collaborative lists in a dark mobile interface" width="390" height="844" loading="lazy" decoding="async"><span class="screen-link__zoom" aria-hidden="true">↗</span>
+        </a>
+        <a href="images/archive/lists-shopping.png" data-gallery="lists" data-project="Shared lists" data-caption="The shopping list" class="screen-link" aria-label="Enlarge shared lists: shopping list">
+          <img src="images/archive/lists-shopping.png" alt="A supermarket checklist with item quantities and collaborators" width="390" height="844" loading="lazy" decoding="async"><span class="screen-link__zoom" aria-hidden="true">↗</span>
+        </a>
+        <a href="images/archive/lists-add.png" data-gallery="lists" data-project="Shared lists" data-caption="Adding items" class="screen-link" aria-label="Enlarge shared lists: adding items">
+          <img src="images/archive/lists-add.png" alt="Grocery items organized by category with controls to add them to a list" width="390" height="844" loading="lazy" decoding="async"><span class="screen-link__zoom" aria-hidden="true">↗</span>
+        </a>
+        <a href="images/archive/lists-collaborators.png" data-gallery="lists" data-project="Shared lists" data-caption="Managing collaborators" class="screen-link" aria-label="Enlarge shared lists: managing collaborators">
+          <img src="images/archive/lists-collaborators.png" alt="A shared list’s collaborators with controls for managing members" width="390" height="844" loading="lazy" decoding="async"><span class="screen-link__zoom" aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <div class="project-footnote"><p>Shared lists · 4 screens <span>Click a screen to explore</span></p><span>Organization / Collaboration</span></div>
+    </section>
+
+    <footer class="section archive-footer">
+      <div><p class="eyebrow">From then to now</p><a href="index.html#work" class="archive-footer__return">Back to selected work <span aria-hidden="true">↗</span></a></div>
+      <p>© 2026 Brenda Linck</p>
+    </footer>
+  </main>
+
+  <dialog class="image-viewer" aria-labelledby="viewer-title" aria-describedby="viewer-caption">
+    <div class="image-viewer__header"><h2 id="viewer-title"></h2><button class="viewer-button" type="button" data-viewer-close aria-label="Close image viewer" autofocus>Close <span aria-hidden="true">×</span></button></div>
+    <div class="image-viewer__canvas"><img data-viewer-image alt=""></div>
+    <div class="image-viewer__footer"><div><p id="viewer-caption"></p><p class="image-viewer__status" data-viewer-status aria-live="polite" aria-atomic="true"></p></div><div class="image-viewer__controls"><button class="viewer-button" type="button" data-viewer-prev aria-label="Previous screen">←</button><button class="viewer-button" type="button" data-viewer-next aria-label="Next screen">→</button></div></div>
+  </dialog>
+  <script src="js/main.js?v=responsive-theme-1" defer></script>
+  <script src="js/archive.js" defer></script>
+</body>
+</html>

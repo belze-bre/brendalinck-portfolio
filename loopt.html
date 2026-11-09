@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/theme.js?v=2"></script>
+  <script src="js/clarity.js?v=2" defer></script>
+  <title>Bringing order to the container yard — Brenda Linck</title>
+  <meta name="description" content="Designing Loopt’s operator experience from scratch: clearer task sequences, persistent instructions, and a yard view shaped by operator feedback.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css?v=responsive-theme-1">
+  <link rel="stylesheet" href="css/layout.css?v=responsive-theme-2">
+  <link rel="stylesheet" href="css/case-new.css?v=responsive-theme-1">
+  <link rel="stylesheet" href="css/loopt.css?v=20261109-4">
+</head>
+<body class="loopt-case">
+
+<header class="sidebar">
+  <a href="index.html" class="sidebar__logo">blinck</a>
+  <nav class="sidebar__nav" aria-label="Main navigation">
+    <a href="index.html#work" class="sidebar__link">Work</a>
+    <a href="resume.html" class="sidebar__link">Resume</a>
+    <a href="index.html#about" class="sidebar__link">About</a>
+  </nav>
+  <div class="sidebar__bottom">
+    <button class="theme-toggle" data-theme-toggle aria-label="Toggle light/dark mode" style="position:relative">
+      <svg class="theme-toggle__icon theme-toggle__icon--sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="theme-toggle__icon theme-toggle__icon--moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="main loopt-editorial" aria-labelledby="loopt-heading">
+  <a class="case-back" href="index.html#work">← All work</a>
+
+  <section class="loopt-introduction" aria-labelledby="loopt-heading">
+    <div class="loopt-intro-grid">
+      <header>
+        <p class="loopt-eyebrow">Loopt Yard · Operators</p>
+        <h1 id="loopt-heading">Bringing order to the container yard</h1>
+        <p class="loopt-subtitle">Designing an operator experience that remains in daily use</p>
+      </header>
+      <div class="loopt-intro-summary">
+        <p class="loopt-lead">As Loopt’s sole designer, I created the operator application from scratch, bringing changing instructions, container positions, and task sequences into one operational workflow.</p>
+        <p>First released in May 2023, the experience continues to support daily operations today.</p>
+      </div>
+    </div>
+    <dl class="loopt-project-meta">
+      <div><dt>My role</dt><dd>Staff UX Designer · Sole designer</dd></div>
+      <div><dt>Product</dt><dd>Responsive web application for container-yard operators</dd></div>
+      <div><dt>Contribution</dt><dd>Research, workflow definition, interaction design, interface design, and post-launch refinement</dd></div>
+    </dl>
+  </section>
+
+  <figure class="loopt-hero-media">
+    <video data-case-motion autoplay muted loop playsinline preload="auto" disablepictureinpicture tabindex="-1" width="1040" height="944" poster="media/loopt-service-workflow-poster.webp" aria-label="Run service prototype: placement instruction and confirmation">
+      <source src="media/loopt-service-workflow.mp4" type="video/mp4">
+      <a href="media/loopt-service-workflow.mp4">Watch the service-execution prototype</a>
+    </video>
+    <figcaption>Run a service, inspect its placement instruction, and confirm the movement.</figcaption>
+  </figure>
+
+  <section class="loopt-chapter" id="context" aria-labelledby="context-heading">
+    <header class="loopt-section-heading">
+      <p class="loopt-eyebrow">The challenge</p>
+      <h2 id="context-heading">The yard kept changing.<br>The instructions struggled to keep up.</h2>
+    </header>
+    <div class="loopt-context-grid">
+      <div class="loopt-copy">
+        <h3>The operation behind the interface</h3>
+        <p>A container terminal stores and moves containers while they await collection, inspection, or other services. Inside its yard, containers are stacked, so <strong>accessing one almost always requires moving several others first.</strong></p>
+        <p>Each additional movement takes minutes and consumes fuel, equipment capacity, and labour. <strong>A placement decision today can create unnecessary work hours or days later.</strong></p>
+        <p>Loopt uses AI to coordinate service sequencing and container placement. It integrates with the terminal’s existing management system and sends instructions directly to the operators moving the containers.</p>
+        <p>My responsibility was to design the experience through which those instructions became daily work.</p>
+        <figure>
+          <img src="images/loopt-cab-displays.png" alt="Operator cab with machine displays and controls annotated during fieldwork" width="541" height="396" loading="lazy" decoding="async">
+          <figcaption>The application needed to coexist with the machine’s controls and other displays.</figcaption>
+        </figure>
+      </div>
+      <div class="loopt-copy">
+        <h3>The starting point: instructions that struggled to keep up</h3>
+        <p>Operators’ tools varied across terminals.</p>
+        <p>Some used paper lists with services, deadlines, and the last recorded location of each container. As the operation changed, those lists accumulated handwritten corrections. Strong winds could carry them away; rain could make them unusable.</p>
+        <p>Others worked with tablet applications displaying dense rows of tiny text. In some systems, <mark>an accidental tap could advance the screen without a way to recover the previous instruction.</mark></p>
+        <p>Operators then had to ask yard coordinators for the destination by radio. <strong>Under operational pressure, some placed containers elsewhere without recording the location, reducing traceability and making the yard less predictable.</strong></p>
+        <p>The challenge was to create a clear workflow that preserved essential instructions, accommodated changing conditions, and supported operators’ judgement.</p>
+        <figure class="loopt-context-photo">
+          <img src="images/loopt-paper-instructions.png" alt="A paper container list beside the controls in an operator’s cab" width="516" height="395" loading="lazy" decoding="async">
+          <figcaption>Instructions had to survive the conditions inside the cab.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="loopt-chapter loopt-research" id="research" aria-labelledby="research-heading">
+    <figure class="loopt-research-photo">
+      <img src="images/loopt-operator-research.png" alt="People discussing a tablet inside a container-handling cab" width="483" height="804" loading="lazy" decoding="async">
+      <figcaption>Fieldwork connected individual tasks to the wider operation.</figcaption>
+    </figure>
+    <div class="loopt-copy">
+      <header class="loopt-section-heading">
+        <p class="loopt-eyebrow">Research at the point of work</p>
+        <h2 id="research-heading">Understanding what operators already knew.</h2>
+      </header>
+      <dl class="loopt-research-facts">
+        <div><dt>20+</dt><dd>Interviews with operators, analysts, and supervisors</dd></div>
+        <div><dt>2 weeks</dt><dd>On site alongside the CEO and a machine-learning specialist</dd></div>
+      </dl>
+      <h3>Remote research built the foundation. Fieldwork connected the pieces.</h3>
+      <p>I conducted more than 20 interviews with operators, analysts, and supervisors. Remote research gave me a detailed understanding of their responsibilities, tools, communication practices, and priorities.</p>
+      <p>I then spent two weeks at a terminal alongside the CEO and a machine-learning specialist.</p>
+      <p>Fieldwork revealed how those individual perspectives connected. One container movement affected access to other containers, upcoming deadlines, and the work of subsequent shifts.</p>
+      <p>This deepened my understanding of the design problem: each task belonged to an evolving operation. The interface needed to support the immediate action while making its wider sequence understandable.</p>
+    </div>
+  </section>
+
+  <section class="loopt-chapter" id="expertise" aria-labelledby="expertise-heading">
+    <header class="loopt-section-heading">
+      <p class="loopt-eyebrow">Operator expertise</p>
+      <h2 id="expertise-heading">What felt natural was learned expertise.</h2>
+    </header>
+    <div class="loopt-evidence-grid">
+      <div class="loopt-copy">
+        <p>Operators described knowing what to do naturally.</p>
+        <p>Observing their work revealed the knowledge behind that description. They connected container dates and weights, surrounding stacks, and placement requirements. Refrigerated containers requiring power, for example, introduced different constraints from empty ones.</p>
+        <p>What felt natural to an experienced operator contained relationships learned over time.</p>
+        <p>As Herbert A. Simon wrote:</p>
+        <blockquote>“Intuition is nothing more and nothing less than recognition.”</blockquote>
+        <p>My approach was to make relevant information available at the moment of action, so operators could apply that expertise alongside the model’s recommendations.</p>
+      </div>
+      <figure>
+        <img class="loopt-bays-animation" src="media/loopt-bays-motion.webp" alt="Animated demonstration of navigating yard bays, selecting a container, and viewing movement instructions" width="720" height="498" loading="eager" decoding="async">
+        <figcaption>Navigate the yard by bay, select a container, and inspect its movement instructions.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="loopt-chapter" id="architecture" aria-labelledby="architecture-heading">
+    <header class="loopt-section-heading">
+      <p class="loopt-eyebrow">Workflow architecture</p>
+      <h2 id="architecture-heading">From recommendations to an executable workflow.</h2>
+      <p class="loopt-section-intro">The flow connects service execution, position recommendations, alternative placements, skipped containers, and access to upcoming work.</p>
+    </header>
+    <figure class="loopt-architecture">
+      <div class="loopt-flow" data-flow>
+        <div class="loopt-flow-heading"><h3>Run service user flow</h3><p id="flow-help">Hover or focus a step to follow its journey. Tap a step on touch screens.</p></div>
+        <div class="loopt-diagram-scroll" tabindex="0" role="region" aria-label="Run service user flow; scroll horizontally on smaller screens" aria-describedby="flow-help">
+          <svg class="loopt-flow-svg" viewBox="0 0 1440 1424" role="group" aria-label="Interactive run service user flow">
+            <defs><marker id="flow-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="m2 1 6 4-6 4" fill="none" stroke="context-stroke" stroke-width="1.4"/></marker></defs>
+            <path class="flow-boundary" d="M504 50H1414V694H504Z M504 716H1414V990H504Z M504 1000H1414V1398H504Z"/>
+
+            <path class="flow-edge" data-from="select" data-to="segregate" d="M210 210H236Q250 210 250 195V160Q250 146 270 146" marker-end="url(#flow-arrow)"/>
+            <path class="flow-edge" data-from="select" data-to="execute" d="M210 210H236Q250 210 250 226V263Q250 279 270 279" marker-end="url(#flow-arrow)"/>
+            <path class="flow-edge" data-from="segregate" data-to="choose" d="M460 146H500Q516 146 516 133H540" marker-end="url(#flow-arrow)"/>
+            <path class="flow-edge" data-from="execute" data-to="choose" d="M460 279H492Q510 279 510 260V150Q510 133 540 133" marker-end="url(#flow-arrow)"/>
+            <path class="flow-edge" data-from="choose" data-to="confirm" d="M728 133H1194" marker-end="url(#flow-arrow)"/>
+            <path class="flow-edge" data-from="ask" data-to="suggestion" d="M728 261H796" marker-end="url(#flow-arrow)"/>
+            <path class="flow-edge" data-from="suggestion" data-to="follow" d="M984 261H1034" marker-end="url(#flow-arrow)"/>
+            <path class="flow-edge" data-from="follow" data-to="confirm" d="M1154 248H1166Q1178 248 1178 230V150Q1178 133 1194 133" marker-end="url(#flow-arrow)"/>
+            <path class="flow-edge" data-from="suggestion" data-to="reject" d="M890 304V346" marker-end="url(#flow-arrow)"/>
+            <path class="flow-edge" data-from="reject" data-to="manual" d="M732 373H634V438" marker-end="url(#flow-arrow)"/>
+            <path class="flow-edge" data-from="manual" data-to="confirm" d="M728 481H1156Q1178 481 1178 459V150Q1178 133 1194 133" marker-end="url(#flow-arrow)"/>
+            <path class="flow-edge" data-from="skip" data-to="justify" d="M728 609H796" marker-end="url(#flow-arrow)"/>
+            <path class="flow-edge" data-from="justify" data-to="confirm" d="M984 609H1156Q1178 609 1178 587V150Q1178 133 1194 133" marker-end="url(#flow-arrow)"/>
+            <path class="flow-edge" data-from="confirm" data-to="next" d="M1288 176V438" marker-end="url(#flow-arrow)"/>
+            <path class="flow-edge" data-from="list" data-to="jump" d="M728 858H760Q778 858 778 840V813Q778 795 796 795" marker-end="url(#flow-arrow)"/>
+            <path class="flow-edge" data-from="list" data-to="return" d="M728 858H760Q778 858 778 876V887Q778 905 796 905" marker-end="url(#flow-arrow)"/>
+            <path class="flow-edge" data-from="list" data-to="filter" d="M634 912V952Q634 974 656 974H1216Q1238 974 1238 952V932" marker-end="url(#flow-arrow)"/>
+            <path class="flow-edge" data-from="interaction" data-to="info" d="M728 1187H750Q768 1187 768 1165V1082Q768 1060 796 1060" marker-end="url(#flow-arrow)"/>
+            <path class="flow-edge" data-from="interaction" data-to="reposition" d="M728 1187H796" marker-end="url(#flow-arrow)"/>
+            <path class="flow-edge" data-from="reposition" data-to="assigned" d="M984 1187H1094" marker-end="url(#flow-arrow)"/>
+            <path class="flow-edge" data-from="interaction" data-to="execute_that" d="M728 1187H750Q768 1187 768 1209V1299Q768 1321 796 1321" marker-end="url(#flow-arrow)"/>
+            <path class="flow-edge" data-from="execute_that" data-to="paused" d="M984 1321H1044" marker-end="url(#flow-arrow)"/>
+            <path class="flow-edge" data-from="paused" data-to="created" d="M1192 1321H1242" marker-end="url(#flow-arrow)"/>
+            <g class="flow-node flow-node--start" data-step="select" tabindex="0" role="button" aria-label="Follow journey: Select service" aria-pressed="false" transform="translate(40 160)">
+<path class="flow-node-shape" d="M85 0 170 50 85 100 0 50Z"/>
+<text x="85.0" y="38.0" text-anchor="middle" dominant-baseline="middle">
+<tspan x="85.0" dy="0">Select</tspan>
+<tspan x="85.0" dy="24">service</tspan>
+</text></g>
+            <g class="flow-node flow-node--default" data-step="segregate" tabindex="0" role="button" aria-label="Follow journey: Segregate after service is executed is..." aria-pressed="false" transform="translate(270 90)">
+<rect class="flow-node-shape" width="190" height="112" rx="8"/>
+<text x="95.0" y="32.0" text-anchor="middle" dominant-baseline="middle">
+<tspan x="95.0" dy="0">Segregate</tspan>
+<tspan x="95.0" dy="24">after service is</tspan>
+<tspan x="95.0" dy="24">executed is...</tspan>
+</text></g>
+            <g class="flow-node flow-node--default" data-step="execute" tabindex="0" role="button" aria-label="Follow journey: Execute" aria-pressed="false" transform="translate(270 240)">
+<rect class="flow-node-shape" width="190" height="78" rx="8"/>
+<text x="95.0" y="39.0" text-anchor="middle" dominant-baseline="middle">
+<tspan x="95.0" dy="0">Execute</tspan>
+</text></g>
+            <g class="flow-node flow-node--ai" data-step="choose" tabindex="0" role="button" aria-label="Follow journey: Choose AI position" aria-pressed="false" transform="translate(540 90)">
+<rect class="flow-node-shape" width="188" height="86" rx="8"/>
+<text x="94.0" y="31.0" text-anchor="middle" dominant-baseline="middle">
+<tspan x="94.0" dy="0">Choose AI</tspan>
+<tspan x="94.0" dy="24">position</tspan>
+</text></g>
+            <g class="flow-node flow-node--ai" data-step="ask" tabindex="0" role="button" aria-label="Follow journey: Ask for new suggestion" aria-pressed="false" transform="translate(540 218)">
+<rect class="flow-node-shape" width="188" height="86" rx="8"/>
+<text x="94.0" y="31.0" text-anchor="middle" dominant-baseline="middle">
+<tspan x="94.0" dy="0">Ask for new</tspan>
+<tspan x="94.0" dy="24">suggestion</tspan>
+</text></g>
+            <g class="flow-node flow-node--ai" data-step="suggestion" tabindex="0" role="button" aria-label="Follow journey: AI generates other suggestion" aria-pressed="false" transform="translate(796 218)">
+<rect class="flow-node-shape" width="188" height="86" rx="8"/>
+<text x="94.0" y="31.0" text-anchor="middle" dominant-baseline="middle">
+<tspan x="94.0" dy="0">AI generates</tspan>
+<tspan x="94.0" dy="24">other suggestion</tspan>
+</text></g>
+            <g class="flow-node flow-node--success" data-step="follow" tabindex="0" role="button" aria-label="Follow journey: Follow" aria-pressed="false" transform="translate(1034 218)">
+<rect class="flow-node-shape" width="120" height="60" rx="8"/>
+<text x="60.0" y="30.0" text-anchor="middle" dominant-baseline="middle">
+<tspan x="60.0" dy="0">Follow</tspan>
+</text></g>
+            <g class="flow-node flow-node--exception" data-step="reject" tabindex="0" role="button" aria-label="Follow journey: Don't follow second AI suggestion" aria-pressed="false" transform="translate(732 346)">
+<rect class="flow-node-shape" width="294" height="54" rx="8"/>
+<text x="147.0" y="27.0" text-anchor="middle" dominant-baseline="middle">
+<tspan x="147.0" dy="0">Don't follow second AI suggestion</tspan>
+</text></g>
+            <g class="flow-node flow-node--default" data-step="manual" tabindex="0" role="button" aria-label="Follow journey: Add position manually" aria-pressed="false" transform="translate(540 438)">
+<rect class="flow-node-shape" width="188" height="86" rx="8"/>
+<text x="94.0" y="31.0" text-anchor="middle" dominant-baseline="middle">
+<tspan x="94.0" dy="0">Add position</tspan>
+<tspan x="94.0" dy="24">manually</tspan>
+</text></g>
+            <g class="flow-node flow-node--default" data-step="skip" tabindex="0" role="button" aria-label="Follow journey: Skip container" aria-pressed="false" transform="translate(540 566)">
+<rect class="flow-node-shape" width="188" height="86" rx="8"/>
+<text x="94.0" y="43.0" text-anchor="middle" dominant-baseline="middle">
+<tspan x="94.0" dy="0">Skip container</tspan>
+</text></g>
+            <g class="flow-node flow-node--exception" data-step="justify" tabindex="0" role="button" aria-label="Follow journey: Justify" aria-pressed="false" transform="translate(796 566)">
+<rect class="flow-node-shape" width="188" height="86" rx="8"/>
+<text x="94.0" y="43.0" text-anchor="middle" dominant-baseline="middle">
+<tspan x="94.0" dy="0">Justify</tspan>
+</text></g>
+            <g class="flow-node flow-node--success" data-step="confirm" tabindex="0" role="button" aria-label="Follow journey: Confirm" aria-pressed="false" transform="translate(1194 90)">
+<rect class="flow-node-shape" width="188" height="86" rx="8"/>
+<text x="94.0" y="43.0" text-anchor="middle" dominant-baseline="middle">
+<tspan x="94.0" dy="0">Confirm</tspan>
+</text></g>
+            <g class="flow-node flow-node--default" data-step="next" tabindex="0" role="button" aria-label="Follow journey: Next container" aria-pressed="false" transform="translate(1194 438)">
+<rect class="flow-node-shape" width="188" height="86" rx="8"/>
+<text x="94.0" y="43.0" text-anchor="middle" dominant-baseline="middle">
+<tspan x="94.0" dy="0">Next container</tspan>
+</text></g>
+            <g class="flow-node flow-node--default" data-step="list" tabindex="0" role="button" aria-label="Follow journey: See list of containers in service" aria-pressed="false" transform="translate(540 804)">
+<rect class="flow-node-shape" width="188" height="108" rx="8"/>
+<text x="94.0" y="30.0" text-anchor="middle" dominant-baseline="middle">
+<tspan x="94.0" dy="0">See list of</tspan>
+<tspan x="94.0" dy="24">containers in</tspan>
+<tspan x="94.0" dy="24">service</tspan>
+</text></g>
+            <g class="flow-node flow-node--success" data-step="jump" tabindex="0" role="button" aria-label="Follow journey: Jump to selected cont..." aria-pressed="false" transform="translate(796 752)">
+<rect class="flow-node-shape" width="188" height="86" rx="8"/>
+<text x="94.0" y="31.0" text-anchor="middle" dominant-baseline="middle">
+<tspan x="94.0" dy="0">Jump to</tspan>
+<tspan x="94.0" dy="24">selected cont...</tspan>
+</text></g>
+            <g class="flow-node flow-node--default" data-step="return" tabindex="0" role="button" aria-label="Follow journey: Return" aria-pressed="false" transform="translate(796 878)">
+<rect class="flow-node-shape" width="188" height="54" rx="8"/>
+<text x="94.0" y="27.0" text-anchor="middle" dominant-baseline="middle">
+<tspan x="94.0" dy="0">Return</tspan>
+</text></g>
+            <g class="flow-node flow-node--default" data-step="filter" tabindex="0" role="button" aria-label="Follow journey: Filter by: • Concluded • Skipped • Next ones • Target Container" aria-pressed="false" transform="translate(1094 752)">
+<rect class="flow-node-shape" width="288" height="180" rx="8"/>
+<text x="144.0" y="42.0" text-anchor="middle" dominant-baseline="middle">
+<tspan x="144.0" dy="0">Filter by:</tspan>
+<tspan x="144.0" dy="24">• Concluded</tspan>
+<tspan x="144.0" dy="24">• Skipped</tspan>
+<tspan x="144.0" dy="24">• Next ones</tspan>
+<tspan x="144.0" dy="24">• Target Container</tspan>
+</text></g>
+            <g class="flow-node flow-node--default" data-step="interaction" tabindex="0" role="button" aria-label="Follow journey: Container Interaction" aria-pressed="false" transform="translate(540 1144)">
+<rect class="flow-node-shape" width="188" height="86" rx="8"/>
+<text x="94.0" y="31.0" text-anchor="middle" dominant-baseline="middle">
+<tspan x="94.0" dy="0">Container</tspan>
+<tspan x="94.0" dy="24">Interaction</tspan>
+</text></g>
+            <g class="flow-node flow-node--default" data-step="info" tabindex="0" role="button" aria-label="Follow journey: Container information Container ID, Position, Service, Kind of container, Weight, Observations" aria-pressed="false" transform="translate(796 1012)">
+<rect class="flow-node-shape" width="586" height="96" rx="8"/>
+<text x="293.0" y="24.0" text-anchor="middle" dominant-baseline="middle">
+<tspan x="293.0" dy="0">Container information</tspan>
+<tspan x="293.0" dy="24">Container ID, Position, Service, Kind of container,</tspan>
+<tspan x="293.0" dy="24">Weight, Observations</tspan>
+</text></g>
+            <g class="flow-node flow-node--default" data-step="reposition" tabindex="0" role="button" aria-label="Follow journey: Reposition" aria-pressed="false" transform="translate(796 1154)">
+<rect class="flow-node-shape" width="188" height="66" rx="8"/>
+<text x="94.0" y="33.0" text-anchor="middle" dominant-baseline="middle">
+<tspan x="94.0" dy="0">Reposition</tspan>
+</text></g>
+            <g class="flow-node flow-node--default" data-step="assigned" tabindex="0" role="button" aria-label="Follow journey: New position is assigned manually" aria-pressed="false" transform="translate(1094 1144)">
+<rect class="flow-node-shape" width="288" height="86" rx="8"/>
+<text x="144.0" y="31.0" text-anchor="middle" dominant-baseline="middle">
+<tspan x="144.0" dy="0">New position is</tspan>
+<tspan x="144.0" dy="24">assigned manually</tspan>
+</text></g>
+            <g class="flow-node flow-node--default" data-step="execute_that" tabindex="0" role="button" aria-label="Follow journey: Execute that service" aria-pressed="false" transform="translate(796 1278)">
+<rect class="flow-node-shape" width="188" height="86" rx="8"/>
+<text x="94.0" y="31.0" text-anchor="middle" dominant-baseline="middle">
+<tspan x="94.0" dy="0">Execute that</tspan>
+<tspan x="94.0" dy="24">service</tspan>
+</text></g>
+            <g class="flow-node flow-node--warning" data-step="paused" tabindex="0" role="button" aria-label="Follow journey: Current service is paused" aria-pressed="false" transform="translate(1044 1278)">
+<rect class="flow-node-shape" width="148" height="86" rx="8"/>
+<text x="74.0" y="31.0" text-anchor="middle" dominant-baseline="middle">
+<tspan x="74.0" dy="0">Current service</tspan>
+<tspan x="74.0" dy="24">is paused</tspan>
+</text></g>
+            <g class="flow-node flow-node--success" data-step="created" tabindex="0" role="button" aria-label="Follow journey: New service is created" aria-pressed="false" transform="translate(1242 1278)">
+<rect class="flow-node-shape" width="140" height="86" rx="8"/>
+<text x="70.0" y="31.0" text-anchor="middle" dominant-baseline="middle">
+<tspan x="70.0" dy="0">New service</tspan>
+<tspan x="70.0" dy="24">is created</tspan>
+</text></g>
+          </svg>
+        </div>
+      </div>
+      <figcaption>Explore the workflow, step by step. <a href="images/loopt-workflow-architecture.png" target="_blank" rel="noopener">Open full-size diagram ↗</a></figcaption>
+    </figure>
+  </section>
+
+  <section class="loopt-chapter" id="improvements" aria-labelledby="improvements-heading">
+    <header class="loopt-section-heading">
+      <p class="loopt-eyebrow">What improved</p>
+      <h2 id="improvements-heading">Clearer work, from the queue to the yard.</h2>
+    </header>
+
+    <article class="loopt-improvement">
+      <div class="loopt-copy">
+        <p class="loopt-eyebrow">01 · Make the sequence visible</p>
+        <h3>A clear next action, with the wider task in view.</h3>
+        <p>Completing a service could require several movements before the target container became accessible. The sequence needed to account for its <mark>deadline</mark>, <mark>the time required for each movement</mark>, and <mark>the future deadlines of containers blocking access.</mark></p>
+        <p>I organised the experience around that sequence. Execution screens focused on the current container, while progress indicators showed how many steps remained.</p>
+        <p>Distinct visual states identified skipped containers, which could indicate a discrepancy between the recorded location and the physical yard.</p>
+        <p>The workflow made room for both planned execution and the exceptions operators encountered in practice.</p>
+        <p class="loopt-improvement-summary">Operators could follow the immediate instruction and inspect the work ahead.</p>
+      </div>
+      <figure class="loopt-concept" data-concept="sequence">
+        <svg viewBox="0 0 640 440" role="img" aria-labelledby="sequence-title sequence-desc">
+          <title id="sequence-title">The sequence makes the target reachable</title>
+          <desc id="sequence-desc">An isometric yard with a target container behind a blocking container. Moving the blocker aside opens a route to the target. The drawing explains a physical dependency, rather than an application screen.</desc>
+          <defs>
+            <g id="sequence-container" class="concept-container">
+              <path class="concept-top" d="M0 32 100 -18 156 10 56 60Z"/>
+              <path class="concept-end" d="M0 32 56 60 56 112 0 84Z"/>
+              <path class="concept-side" d="M56 60 156 10 156 62 56 112Z"/>
+              <path class="concept-ribs" d="M72 52v52m17-61v52m17-61v52m17-61v52m17-61v52M13 40v36m14-29v36m14-29v36"/>
+            </g>
+            <marker id="sequence-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="m2 1 5 4-5 4" class="concept-arrow"/></marker>
+          </defs>
+          <path class="concept-ground" d="M56 251 316 121 596 261 336 391Z"/>
+          <path class="concept-grid" d="m121 218 280 140m-215-173 280 140m-215-173 280 140M126 286l260-130M196 321l260-130M266 356l260-130"/>
+          <use href="#sequence-container" x="270" y="130" class="concept-target"/>
+          <path class="concept-ghost" d="m230 271 100-50 56 28v52l-100 50-56-28Z m0 0 56 28 100-50m-100 50v52"/>
+          <path class="concept-route concept-sequence-route" d="M375 234c71 35 91 71 143 88" marker-end="url(#sequence-arrow)"/>
+          <g class="concept-blocker"><use href="#sequence-container" x="230" y="239"/></g>
+          <path class="concept-move" d="M241 266c-40-20-67-34-105-52" marker-end="url(#sequence-arrow)"/>
+          <path class="concept-leader" d="M172 134 122 134 122 176"/>
+          <text class="concept-label" x="72" y="118">Clear access first</text>
+          <path class="concept-leader" d="M427 119 467 99h83"/>
+          <text class="concept-label concept-label--accent" x="465" y="84">Reach the target</text>
+          <circle class="concept-anchor" cx="427" cy="119" r="3"/>
+        </svg>
+        <figcaption>Make the dependency visible: clearing access is part of completing the service.</figcaption>
+      </figure>
+    </article>
+
+    <article class="loopt-improvement loopt-improvement--reverse">
+      <div class="loopt-copy">
+        <p class="loopt-eyebrow">02 · Keep the instruction available</p>
+        <h3>The destination stays visible until confirmation.</h3>
+        <p>On the execution screen, the action to advance displayed the recommended placement. I retained a separate confirmation step so an accidental tap would not immediately replace the destination with the next container’s information.</p>
+        <p>This decision came from observing how lost instructions disrupted the work. Keeping the destination available until confirmation addressed that failure before the operator moved on.</p>
+        <p>Operators could also request a new recommendation, inspect upcoming movements, or reject a suggested position and report their chosen alternative.</p>
+        <p>These options supported informed execution while allowing operators to respond to conditions the recommendation needed to account for.</p>
+        <p class="loopt-improvement-summary">A deliberate confirmation protected the instruction while preserving the operator’s judgement.</p>
+      </div>
+      <figure class="loopt-service-demo">
+        <video data-case-motion autoplay muted loop playsinline preload="auto" disablepictureinpicture tabindex="-1" width="1920" height="1080" poster="images/home-loopt.webp" aria-label="Animated Loopt operator workflow preview">
+          <source src="media/loopt-overview.mp4" type="video/mp4">
+          Your browser does not support this video.
+        </video>
+        <figcaption>From the service queue to the next container movement.</figcaption>
+      </figure>
+    </article>
+
+    <article class="loopt-improvement">
+      <div class="loopt-copy">
+        <p class="loopt-eyebrow">03 · Support work beyond the queue</p>
+        <h3>A yard view shaped by the people using it.</h3>
+        <p>After launch, operators requested a view of the yard’s current state before executing services.</p>
+        <p>We added a yard visualisation that also allowed them to initiate container movements themselves.</p>
+        <p>I observed operators using it to prepare the yard for upcoming days, particularly during night shifts. They assessed positions and reorganised containers to make the following day’s services easier to execute.</p>
+        <p>The application’s role expanded beyond immediate instructions. It supported preparation across shifts and the different operating practices of each terminal.</p>
+        <p class="loopt-improvement-summary">The application grew from immediate instructions into a tool for preparation across shifts.</p>
+      </div>
+      <figure class="loopt-concept" data-concept="shifts">
+        <svg viewBox="0 0 640 400" role="img" aria-labelledby="shifts-title shifts-desc">
+          <title id="shifts-title">Preparing the yard now opens access for the next shift</title>
+          <desc id="shifts-desc">Two small isometric yards connect a night shift to the following day. A container is repositioned during preparation; the next yard shows a clear access lane. This illustrates the value of looking beyond the assigned queue.</desc>
+          <defs>
+            <g id="shift-container" class="concept-container">
+              <path class="concept-top" d="M0 32 100 -18 156 10 56 60Z"/>
+              <path class="concept-end" d="M0 32 56 60 56 112 0 84Z"/>
+              <path class="concept-side" d="M56 60 156 10 156 62 56 112Z"/>
+              <path class="concept-ribs" d="M72 52v52m17-61v52m17-61v52m17-61v52m17-61v52"/>
+            </g>
+            <marker id="shifts-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="m2 1 5 4-5 4" class="concept-arrow"/></marker>
+          </defs>
+          <path transform="translate(37 20)" class="concept-moon" d="M149 71a25 25 0 1 1-27-36 23 23 0 0 0 27 36Z"/>
+          <circle transform="translate(-15 20)" class="concept-sun" cx="497" cy="58" r="16"/>
+          <path transform="translate(-15 20)" class="concept-sun" d="M497 29v-8m0 74v-8m29-29h8m-74 0h8m50-21 6-6m-54 54 6-6m42 0 6 6m-54-54 6 6"/>
+          <g transform="translate(22 140) scale(.7)">
+            <path class="concept-ground" d="M0 160 210 55 400 150 190 255Z"/>
+            <path class="concept-grid" d="m70 125 190 95m-120-130 190 95M63 192l210-105m-147 137 210-105"/>
+            <use href="#shift-container" x="180" y="56"/>
+            <use href="#shift-container" x="74" y="109" class="concept-target"/>
+          </g>
+          <path class="concept-move" d="M111 297Q76 300 60 279" marker-end="url(#shifts-arrow)"/>
+          <path class="concept-bridge" d="M307 242h30" marker-end="url(#shifts-arrow)"/>
+          <g transform="translate(342 140) scale(.7)">
+            <path class="concept-ground" d="M0 160 210 55 400 150 190 255Z"/>
+            <path class="concept-grid" d="m70 125 190 95m-120-130 190 95M63 192l210-105m-147 137 210-105"/>
+            <use href="#shift-container" x="180" y="56"/>
+            <use href="#shift-container" x="6" y="75" class="concept-target concept-shift-prepared"/>
+            <path class="concept-route" d="M98 209 208 154" marker-end="url(#shifts-arrow)"/>
+          </g>
+          <text class="concept-label" x="162" y="360" text-anchor="middle">Prepare this shift</text>
+          <text class="concept-label concept-label--accent" x="482" y="360" text-anchor="middle">Access next shift</text>
+        </svg>
+        <figcaption>A move made this shift can make the next shift’s work easier.</figcaption>
+      </figure>
+    </article>
+
+  </section>
+
+  <section class="loopt-chapter" id="interfaces" aria-labelledby="interfaces-heading">
+    <header class="loopt-section-heading">
+      <p class="loopt-eyebrow">Interface screens and prototypes</p>
+      <h2 id="interfaces-heading">Adapt the concept to the actual devices.</h2>
+    </header>
+    <figure class="loopt-wireframes loopt-evidence-figure">
+      <img src="images/loopt-wireframes.png" alt="Interface explorations across portrait and landscape, including queues, movement confirmation, search, and yard layouts" width="1628" height="1667" loading="lazy" decoding="async">
+      <figcaption>Explorations across screen sizes and orientations. <a href="images/loopt-wireframes.png" target="_blank" rel="noopener">Open full-size explorations ↗</a></figcaption>
+    </figure>
+    <div class="loopt-evidence-grid loopt-postlaunch">
+      <div class="loopt-copy">
+        <h3>Refine the workflow after launch</h3>
+        <p>Following the first release in May 2023, I continued observing operators, reviewing usage through Microsoft Clarity, and incorporating feedback.</p>
+        <p>Requests often arrived as proposed solutions, such as adding a button. I investigated the underlying task before deciding how a change should fit into the workflow.</p>
+        <p>The yard visualisation became a concrete example of this process: operator input introduced a capability that supported work beyond the original service sequence.</p>
+      </div>
+      <figure>
+        <img src="images/loopt-search.png" alt="Search screen with shortcuts for containers, vehicles, and yard positions" width="1123" height="808" loading="lazy" decoding="async">
+        <figcaption>Search screen and keyboard-trigger scenarios.</figcaption>
+      </figure>
+    </div>
+
+  </section>
+
+  <section class="loopt-chapter" id="impact" aria-labelledby="impact-heading">
+    <header class="loopt-section-heading">
+      <p class="loopt-eyebrow">Reported business outcomes</p>
+      <h2 id="impact-heading">Less wasted movement.<br>More useful work.</h2>
+      <p class="loopt-section-intro">Customer interviews describe benefits across operating costs, service delivery, working conditions, and staffing. These outcomes reflect the broader Loopt implementation, combining optimisation, operational changes, and the application used to execute the work.</p>
+    </header>
+
+    <div class="loopt-results">
+      <article class="loopt-result">
+        <p class="loopt-result-value"><strong>≈50<span>%</span></strong> <span class="loopt-result-change">fewer</span></p>
+        <h3>Unproductive movements</h3>
+        <p>Less unnecessary container handling, freeing time and equipment capacity for the work that needed to happen.</p>
+        <p class="loopt-source-note">Approximate reduction reported in a customer interview.</p>
+      </article>
+      <article class="loopt-result">
+        <p class="loopt-result-value"><strong>33,000<span> L</span></strong> <span class="loopt-result-change">saved</span></p>
+        <h3>Diesel in one month</h3>
+        <p>Lower fuel consumption as fewer unnecessary movements were made across the operation.</p>
+        <p class="loopt-source-note">Reported in Loopt’s published Transbrasa case.</p>
+      </article>
+    </div>
+
+    <div class="loopt-benefits">
+      <article>
+        <h3>Operational and financial benefits</h3>
+        <ul>
+          <li><strong>Approximately 50% fewer unproductive movements</strong> Reported in a customer interview.</li>
+          <li><strong>33,000 litres of diesel saved in one month</strong> According to Loopt’s published Transbrasa case.</li>
+          <li><strong>Lower operating costs</strong> With interviewees describing savings from fewer movements and reduced maintenance and tyre wear.</li>
+          <li><strong>More reliable appointment fulfilment</strong> With Ecoporto’s operations manager reporting greater confidence in delivering planned services.</li>
+          <li><strong>Faster container handling</strong> Reported by an operator after adapting to the new workflow. <a class="loopt-video-source" href="https://www.youtube.com/watch?v=fmyNlShAIQc" target="_blank" rel="noopener">Customer video: Transbrasa &amp; Loopt · Globo Porto 360 ↗</a></li>
+          <li><strong>Simpler export organisation</strong> Grouping containers by vessel rather than individual booking to reduce separate stacks and additional movements.</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Benefits for operators and teams</h3>
+        <ul>
+          <li><strong>Direct access to instructions</strong> Including the work queue and recommended positions.</li>
+          <li><strong>Less dependence on coordination by radio</strong> Allowing operators to consult and execute service orders directly.</li>
+          <li><strong>Visibility into upcoming work</strong> Supporting understanding of the task sequence.</li>
+          <li><strong>Less fatigue and a calmer yard</strong> Described as consequences of fewer movements and better organisation.</li>
+          <li><strong>Staff reassignment without dismissals at Ecoporto</strong> Where people were moved to other activities that needed additional support.</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Environmental benefits</h3>
+        <ul>
+          <li><strong>Lower diesel consumption</strong> Supported by the reported fuel savings.</li>
+          <li><strong>Lower CO₂ emissions</strong> Described in the interviews as a benefit of reducing equipment movements.</li>
+        </ul>
+      </article>
+    </div>
+    <figure class="loopt-operation-photo">
+      <img src="images/loopt-terminal-operation.png" alt="Container-handling equipment moving containers beside a ship and terminal warehouse" width="1920" height="1080" loading="lazy" decoding="async">
+      <figcaption>The terminal environment in which the operator application is used.</figcaption>
+    </figure>
+  </section>
+
+  <section class="loopt-chapter" id="continued-use" aria-labelledby="continued-use-heading">
+    <header class="loopt-section-heading">
+      <p class="loopt-eyebrow">Evidence of continued use</p>
+      <h2 id="continued-use-heading">Operator feedback became part of daily work.</h2>
+      <p class="loopt-section-intro">The application remains in operational use, retaining the interface structure I originally designed.</p>
+    </header>
+    <p class="loopt-data-period">Analytics from one client for the 30-day period ending 9 October 2026 show:</p>
+    <dl class="loopt-usage">
+      <div><dt>5,893</dt><dd>Recorded sessions</dd></div>
+      <div><dt>62.16<span>%</span></dt><dd>Sessions accessing the yard view<span>3,663 recorded sessions</span></dd></div>
+      <div><dt>4,249</dt><dd>Sessions with position confirmation</dd></div>
+    </dl>
+    <p class="loopt-source-note">The same session can include both activities; these counts overlap.</p>
+    <div class="loopt-continued-copy">
+      <p>The yard view provides the clearest connection between operator feedback and continued use: a capability requested after launch now appears in more than six out of ten recorded sessions at this client.</p>
+      <p>Customer testimony adds context to those numbers. Ecoporto’s operations manager described operators receiving their queue, understanding the recommended position, and executing services without contacting a controller for each instruction.</p>
+    </div>
+    <p class="loopt-contribution">My contribution was to create the experience supporting that execution: understandable sequences, persistent instructions, visibility into the yard, and room for operational judgement.</p>
+  </section>
+
+  <section class="loopt-reflection" aria-labelledby="reflection-heading">
+    <h2 id="reflection-heading">What I would revisit today.</h2>
+    <div class="loopt-copy">
+      <p>As a web application, Loopt also gave terminals more flexibility to use phones alongside tablets.</p>
+      <p>Today, I would revisit information density, navigation, and spatial orientation around smaller screens and their use in the cab. Continued operation provides a richer basis for those decisions than we had at the initial release.</p>
+      <p>The experience I created established the foundation. Its sustained use—and the ways operators extended it into their working routines—provides evidence for its next stage of improvement.</p>
+    </div>
+  </section>
+
+  <footer class="loopt-footer">
+    <a href="index.html#work">← All work</a>
+    <a href="smartyard.html">Next: SmartYard <span aria-hidden="true">↗</span></a>
+  </footer>
+</main>
+<script src="js/main.js?v=responsive-theme-1" defer></script>
+<script src="js/loopt-concepts.js?v=20261109-4" defer></script>
+<script src="js/loopt-media.js?v=20261109-4" defer></script>
+</body>
+</html>

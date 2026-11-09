@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/theme.js?v=2"></script>
+  <script src="js/clarity.js?v=2" defer></script>
+  <title>Breaking the Conversion Block — Brenda Linck</title>
+  <meta name="description" content="Nutritionist search platform redesign: research, heuristic evaluation, benchmarking, Clarity usage analysis, and a 285-person audience survey.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css?v=responsive-theme-1">
+  <link rel="stylesheet" href="css/layout.css?v=responsive-theme-2">
+  <link rel="stylesheet" href="css/case-new.css?v=responsive-theme-1">
+  <link rel="stylesheet" href="css/fyn.css">
+  <style>
+    .case-cols-wide { grid-template-columns: 160px minmax(0, 1fr); }
+    .case-meta-item { min-width: 0; }
+    @media (max-width: 767px) {
+      .case-cols-wide { grid-template-columns: minmax(0, 1fr); }
+    }
+  </style>
+</head>
+<body class="fyn-case">
+
+<header class="sidebar">
+  <a href="index.html" class="sidebar__logo">blinck</a>
+  <nav class="sidebar__nav" aria-label="Main navigation">
+    <a href="index.html#work"       class="sidebar__link">Work</a>
+    <a href="resume.html" class="sidebar__link">Resume</a>
+    <a href="index.html#about"      class="sidebar__link">About</a>
+  </nav>
+  <div class="sidebar__bottom">
+    <button class="theme-toggle" data-theme-toggle aria-label="Toggle light/dark mode" style="position:relative">
+      <svg class="theme-toggle__icon theme-toggle__icon--sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+<circle cx="12" cy="12" r="5"/>
+<line x1="12" y1="1" x2="12" y2="3"/>
+<line x1="12" y1="21" x2="12" y2="23"/>
+<line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+<line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+<line x1="1" y1="12" x2="3" y2="12"/>
+<line x1="21" y1="12" x2="23" y2="12"/>
+<line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+<line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+</svg>
+      <svg class="theme-toggle__icon theme-toggle__icon--moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+</svg>
+    </button>
+  </div>
+</header>
+
+<main class="main">
+
+<div class="section case-intro" data-animate>
+<a href="index.html" class="case-back">← All work</a>
+<h1 class="case-title">Breaking the<br>Conversion Block</h1>
+<p class="case-summary">A research-led redesign of a nutritionist search platform, helping patients find the right professional and book an appointment.</p>
+<div class="case-meta-row">
+<div class="case-meta-item">
+<span class="case-meta-label">Industry</span>
+<span class="case-meta-value">Healthcare · Nutrition</span>
+</div>
+<div class="case-meta-item">
+<span class="case-meta-label">My Role</span>
+<span class="case-meta-value">Product Designer<br>From research to handoff</span>
+</div>
+<div class="case-meta-item">
+<span class="case-meta-label">Team</span>
+<span class="case-meta-value">Product design, frontend development, and technical leadership</span>
+</div>
+</div>
+</div>
+<div class="case-bleed-image" data-animate>
+<img src="images/fyn-refresh/mobile-flow.png" alt="Refreshed mobile flow: nutritionist search, profile, available appointments, patient details, and confirmation">
+</div>
+<div class="section" style="padding-top:var(--space-5);padding-bottom:var(--space-5)">
+<p class="case-body" style="font-size:var(--text-sm)">Interface refreshed for portfolio presentation. The research and findings below refer to the original project.</p>
+</div>
+<section class="section" data-animate>
+<div class="case-cols-wide">
+<div class="case-col-label">
+<span class="case-section-label">Overview</span>
+</div>
+<div class="case-col-main">
+<h2 class="case-h2">Overview</h2>
+<p class="case-body">The nutritionist search site was designed to help professionals attract new patients. Despite thousands of daily visits, appointments booked through the site accounted for <mark>less than 4% of patients using the software.</mark></p>
+<p class="case-body">I coordinated the research and design, working with the technical lead in weekly check-ins to understand the constraints of the legacy system.</p>
+</div>
+</div>
+</section>
+<section class="section" data-animate>
+<div class="case-cols-wide">
+<div class="case-col-label">
+<span class="case-section-label">Context</span>
+</div>
+<div class="case-col-main">
+<h2 class="case-h2">Context</h2>
+<p class="case-body"><strong>Why wasn’t traffic turning into appointments?</strong></p>
+<p class="case-body">We asked nutritionists how many new patients they had received through “Find Nutritionists.” Most had received none, even though a profile was created when they signed up for the software. Yet <mark>the site consistently received many visits and various interactive clicks.</mark> We needed to understand where that interest was getting lost.</p>
+</div>
+</div>
+</section>
+<section class="section" data-animate>
+<div class="case-cols-wide">
+<div class="case-col-label">
+<span class="case-section-label">Discovery Methods</span>
+</div>
+<div class="case-col-main">
+<h2 class="case-h2">Discovery Methods</h2>
+<p class="case-body">We combined a heuristic evaluation, a review of comparable search and booking flows, Clarity heatmaps and session recordings, and a survey of 285 people who had used nutrition services.</p>
+<p class="case-body">Together, these methods helped us understand where the experience broke down and what patients needed to choose a nutritionist.</p>
+</div>
+</div>
+</section>
+<div class="section" data-animate>
+<img src="images/fyn-refresh/desktop-search.png" alt="Refreshed desktop search with visible filters, reviews, pricing, and appointment availability" loading="lazy" style="display:block;width:100%;height:auto">
+</div>
+<div class="section" data-animate>
+<img src="images/fyn-refresh/desktop-booking.png" alt="Refreshed desktop booking with patient details and a clear appointment summary" loading="lazy" style="display:block;width:100%;height:auto">
+</div>
+<section class="section" data-animate>
+<div class="case-cols-wide">
+<div class="case-col-label"><span class="case-section-label">Heuristic evaluation</span></div>
+<div class="case-col-main">
+<h2 class="case-h2">The experience got in the way of booking.</h2>
+<p class="case-body">Each product team member reviewed the site independently using Nielsen’s usability heuristics. We then compared our observations. Seven issues stood out.</p>
+<ol class="fyn-findings">
+<li><div><h3 class="fyn-finding-title">Search started with a barrier.</h3>
+<p class="case-body">The search field did not work as expected. Patients had to select a state before choosing a city, creating <mark>friction and frustrating clicks on the initial screen.</mark> Starting with location also made it harder to search by specialty or find online appointments.</p></div></li>
+<li><div><h3 class="fyn-finding-title">The interface no longer matched the service.</h3>
+<p class="case-body">The site <mark>had not been updated for many years,</mark> leaving outdated copy and layouts throughout the journey. Some elements looked like buttons but were only informational.</p></div></li>
+<li><div><h3 class="fyn-finding-title">Patients were reading copy written for professionals.</h3>
+<p class="case-body">Some <mark>texts were confusing and directed at nutritionists,</mark> including “over 6 million meal plans prescribed for your patients.” The language did not address the people trying to book care.</p></div></li>
+<li><div><h3 class="fyn-finding-title">The site promised features that no longer existed.</h3>
+<p class="case-body">Discontinued features were still <mark>listed as available.</mark> Patients could not rely on the information presented to them.</p></div></li>
+<li><div><h3 class="fyn-finding-title">The value of the service was unclear.</h3>
+<p class="case-body">The landing page made <mark>little connection between the advantages of using “Find Nutritionists” and the nutritional monitoring provided by the platform.</mark> It did not clearly explain how finding a professional would lead to ongoing care.</p></div></li>
+<li><div><h3 class="fyn-finding-title">Patients could not search within their budget.</h3>
+<p class="case-body">The filters did not cover key decision factors. There was no way to set a <mark>price range</mark> anywhere on the site.</p></div></li>
+<li><div><h3 class="fyn-finding-title">A prominent action sent patients to the wrong place.</h3>
+<p class="case-body">The “Try it for free” button <mark>led to the sales page aimed at nutritionists,</mark> taking potential patients away from their search.</p></div></li>
+</ol>
+</div>
+</div>
+</section>
+<section class="section" data-animate>
+<div class="case-cols-wide">
+<div class="case-col-label"><span class="case-section-label">Benchmarking</span></div>
+<div class="case-col-main">
+<h2 class="case-h2">Make comparison easier before asking people to book.</h2>
+<p class="case-body">We reviewed healthcare search platforms alongside hotel booking sites, online stores, and on-demand services. We focused on how they organized filters and displayed availability alongside prices.</p>
+<p class="case-body"><strong>The design opportunity:</strong> bring specialty, price, reviews, and available appointments into the search experience, so patients have the information they need to compare professionals.</p>
+</div>
+</div>
+</section>
+<section class="section" data-animate>
+<div class="case-cols-wide">
+<div class="case-col-label"><span class="case-section-label">Clarity findings</span></div>
+<div class="case-col-main">
+<h2 class="case-h2">People were trying to move forward. The interface wasn’t helping.</h2>
+<p class="case-body">I reviewed heatmaps and session recordings in Clarity. After 100 hours of observation, the data revealed a mobile-heavy audience and repeated obstacles in search.</p>
+<div class="fyn-stats">
+<div class="fyn-stat">
+<span class="fyn-stat__number">71.71%</span>
+<h3 class="fyn-finding-title">of visits came from mobile.</h3>
+<p class="case-body">Most people used their phones, yet the site had poorer usability and performance on mobile. This made a mobile-first redesign a priority.</p>
+</div>
+<div class="fyn-stat">
+<span class="fyn-stat__number">−4%</span>
+<h3 class="fyn-finding-title">engagement between state and city selection.</h3>
+<p class="case-body">Engagement dropped between the two search steps. The location sequence added friction before patients could reach the results.</p>
+</div>
+</div>
+<ol class="fyn-findings">
+<li><div><h3 class="fyn-finding-title">Clicks revealed an expectation to search.</h3>
+<p class="case-body">People repeatedly clicked non-interactive headings about searching by specialty, name, or location and booking online. These clicks pointed to useful filters for the redesign.</p></div></li>
+<li><div><h3 class="fyn-finding-title">Patients expected to enter a city directly.</h3>
+<p class="case-body">Recordings showed people typing a city into the search field without selecting a state first. The required sequence did not match their expectations.</p></div></li>
+<li><div><h3 class="fyn-finding-title">Opening filters rarely led to using them.</h3>
+<p class="case-body">The filter control received frequent clicks, but the neighborhood and specialty options inside were rarely selected. Opening the panel did not translate into a more focused search.</p></div></li>
+<li><div><h3 class="fyn-finding-title">The sales button created a tracking gap.</h3>
+<p class="case-body">“Try it for free” attracted many clicks and sent visitors to the nutritionist sales page. From that point, Clarity could not show whether they returned to search or left entirely.</p></div></li>
+</ol>
+<figure class="fyn-research-image">
+<img src="images/fyn-approved/clarity.png" alt="Clarity heatmaps and session recordings used to investigate search behavior" loading="lazy">
+<figcaption>Heatmaps and session recordings supported the findings above.</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section class="section" data-animate>
+<div class="case-cols-wide">
+<div class="case-col-label">
+<span class="case-section-label">Audience Behavior Research</span>
+</div>
+<div class="case-col-main">
+<h2 class="case-h2">Audience Behavior Research</h2>
+<p class="case-body">We surveyed 285 people who had received or were receiving nutrition care to understand how they chose a professional and what made follow-up difficult.</p>
+</div>
+</div>
+</section>
+<div class="section case-methods-grid" data-animate>
+<div class="case-method">
+<h3 class="case-method__title">84%</h3>
+<p class="case-method__desc">relied on recommendations. When choosing a professional, respondents prioritized patient reviews, price, specialty, location, personal connection, and introductory videos, in that order.</p>
+</div>
+<div class="case-method">
+<h3 class="case-method__title">62%</h3>
+<p class="case-method__desc">sought support for lifestyle changes. Other common reasons were dietary restrictions (59%) and appearance (58%). Respondents could select more than one answer.</p>
+</div>
+<div class="case-method">
+<h3 class="case-method__title">52%</h3>
+<p class="case-method__desc">attended monthly follow-up appointments; 28% returned less often, and 9% did not return.</p>
+</div>
+<div class="case-method">
+<h3 class="case-method__title">61%</h3>
+<p class="case-method__desc">cited cost as a barrier to follow-up, followed by lack of motivation (33%), limited time (29%), and unsatisfactory results (22%).</p>
+</div>
+</div>
+<section class="section" data-animate>
+<div class="case-cols-wide">
+<div class="case-col-label">
+<span class="case-section-label">UX Strategy</span>
+</div>
+<div class="case-col-main">
+<h2 class="case-h2">UX Strategy</h2>
+<p class="case-body">We used familiar search and booking patterns, drawing on Jakob’s Law: people bring expectations from the sites and apps they already use. The aim was to make the next step clear without asking patients to learn a new process.</p>
+<p class="case-body">The research shaped three priorities: make search work on mobile, show the information patients need to compare professionals, and provide a clear path from a profile to an appointment.</p>
+</div>
+</div>
+</section>
+<div class="section case-methods-grid" data-animate>
+<div class="case-method">
+<h3 class="case-method__title">Typography</h3>
+<p class="case-method__desc">We chose Inter for readability across screen sizes, using size and weight to distinguish names, appointment details, and supporting information.</p>
+</div>
+<div class="case-method">
+<h3 class="case-method__title">Colors</h3>
+<p class="case-method__desc">We kept the palette consistent with the brand and used color to distinguish primary actions and selected options.</p>
+</div>
+<div class="case-method">
+<h3 class="case-method__title">Layout Grid</h3>
+<p class="case-method__desc">A flexible grid supported the mobile-first layout and adapted the same content for desktop. Search results, filters, and booking details followed a consistent hierarchy across devices.</p>
+</div>
+</div>
+<section class="section" data-animate>
+<div class="case-cols-wide">
+<div class="case-col-label">
+<span class="case-section-label">Conclusion</span>
+</div>
+<div class="case-col-main">
+<h2 class="case-h2">Conclusion</h2>
+<p class="case-body">The research showed a gap between strong interest in the service and the effort required to book. With more than 70% of visits coming from mobile, we prioritized a mobile-first journey, clearer patient-facing language, and more useful search information.</p>
+<p class="case-body">The redesigned flow brings reviews, prices, and availability into the decision-making process, then guides patients through appointment selection and a shorter contact form.</p>
+</div>
+</div>
+</section>
+  <!-- NAVIGATION ── -->
+  <div class="section case-nav-row" data-animate>
+    <a href="loopt.html" class="case-nav-card">
+      <span class="case-nav-dir">← Previous</span>
+      <span class="case-nav-name">Operator's Seat: From Chaos to Order</span>
+    </a>
+    <a href="index.html#work" class="case-nav-card case-nav-card--center">
+      <span class="case-nav-dir">All work</span>
+    </a>
+    <a href="leap.html" class="case-nav-card case-nav-card--right">
+      <span class="case-nav-dir">Next →</span>
+      <span class="case-nav-name">Career Progression Experience</span>
+    </a>
+  </div>
+
+</main>
+
+<script src="js/main.js?v=responsive-theme-1" defer>
+</script>
+</body>
+</html>
