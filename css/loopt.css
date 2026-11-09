@@ -25,7 +25,7 @@
 .loopt-project-meta dt { margin-bottom:8px; font-size:10px; line-height:1.5; letter-spacing:.08em; text-transform:uppercase; color:var(--loopt-muted); }
 .loopt-project-meta dd { max-width:36ch; font-size:13px; line-height:1.6; }
 .loopt-editorial .loopt-hero-media { max-width:820px; margin-inline:auto; }
-.loopt-hero-media video { aspect-ratio:1040/944; object-fit:contain; background:var(--color-surface); }
+.loopt-hero-media video { aspect-ratio:16/9; object-fit:contain; background:var(--color-surface); }
 
 /* Chapter rhythm: an introduction, then the evidence beside it. */
 .loopt-chapter { margin-top:112px; scroll-margin-top:100px; }
