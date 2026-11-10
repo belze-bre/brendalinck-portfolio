@@ -1,0 +1,12 @@
+.analytics-consent[hidden] { display: none; }
+.analytics-consent { position: fixed; right: 24px; bottom: 24px; z-index: 1000; width: min(380px, calc(100vw - 32px)); padding: 22px; border: 1px solid var(--color-border, #ccc); border-radius: 12px; background: var(--color-bg, #fff); color: var(--color-text, #171717); box-shadow: 0 8px 36px #00000014; font-family: var(--font-sans, Arial, sans-serif); }
+.analytics-consent .analytics-consent__title { margin: 0 0 10px; font-size: 15px; line-height: 1.4; font-weight: 500; color: inherit; }
+.analytics-consent .analytics-consent__description { margin: 0 0 12px; font-size: 12px; line-height: 1.6; color: var(--color-text-muted, #666); }
+.analytics-consent > a { font-size: 11px; line-height: 1.5; color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.analytics-consent__actions { display: flex; gap: 10px; margin-top: 18px; }
+.analytics-consent__actions button { flex: 1; min-height: 42px; padding: 10px 12px; border: 1px solid var(--color-border, #bbb); border-radius: 6px; background: transparent; color: inherit; font: inherit; font-size: 12px; cursor: pointer; }
+.analytics-consent__actions button:hover { border-color: currentColor; }
+.analytics-preferences { display: flex; justify-content: flex-end; padding: 16px 32px; }
+.analytics-preferences button { border: 0; background: none; color: var(--color-text-muted, #777); font: inherit; font-size: 11px; padding: 10px 0; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.analytics-consent a:focus-visible, .analytics-consent button:focus-visible, .analytics-preferences button:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+@media (max-width: 767px) { .analytics-consent { right: 16px; bottom: 16px; padding: 20px; } .analytics-preferences { padding-inline: 24px; } }
