@@ -638,6 +638,15 @@ ul { list-style: none; }
   height:auto;
   max-width:920px;
 }
+@media(min-width:768px) {
+  .more-work { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 40px; align-items:start; }
+  .more-work > .work-header { grid-column:1 / -1; }
+  .more-work > .work-card--compact { display:block; min-width:0; max-width:none; }
+  .more-work > .work-card--compact .work-card__media { width:100%; height:auto; min-height:0; aspect-ratio:16/10; }
+  .more-work > .work-card--compact .work-card__caption { padding:24px 0 0; }
+  .more-work > .work-card--compact h3 { font-size:clamp(24px,2.1vw,34px); line-height:1.2; }
+  .more-work > .work-card + .work-card { margin:0; padding:0; border-top:0; }
+}
 @media(max-width:767px) {
   .work-secondary { grid-template-columns:minmax(0,1fr); row-gap:56px; }
   .work-secondary .work-card--horizontal h3 { font-size:28px; }
