@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <script src="/js/theme.js?v=2"></script>
+  <script src="/js/clarity.js?v=cookieless-4" defer></script>
+  <title>Page not found — Brenda Linck</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/tokens.css?v=responsive-theme-1">
+  <link rel="stylesheet" href="/css/layout.css?v=responsive-theme-2">
+  <link rel="stylesheet" href="/css/case-new.css?v=case-layout-2">
+  <style>
+    .lost { min-height: calc(100vh - 160px); display: grid; place-items: center; text-align: center; padding: 48px 16px; }
+    .lost__inner { max-width: 520px; }
+    .lost__character { width: min(300px, 72vw); aspect-ratio: 836 / 616; margin: 0 auto 32px; border-radius: 20px; overflow: hidden; }
+    [data-theme="light"] .lost__character { background: #dcebe3; }
+    [data-theme="light"] .lost__character path[fill="rgb(255,255,255)"] { fill: #f8d13c; }
+    .lost__character svg { display: block; }
+    .lost__code { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; opacity: .6; margin: 0 0 12px; }
+    .lost h1 { font-size: clamp(32px, 6vw, 56px); line-height: 1.05; letter-spacing: -0.03em; margin: 0 0 16px; }
+    .lost p { margin: 0 auto 28px; max-width: 420px; opacity: .75; line-height: 1.6; }
+    .lost__actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .lost__path { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; opacity: .5; word-break: break-all; margin-top: 24px; }
+  </style>
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml"><link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+</head>
+<body>
+
+<header class="sidebar">
+  <a href="/index.html" class="sidebar__logo">blinck</a>
+  <nav class="sidebar__nav" aria-label="Main navigation">
+    <a href="/index.html#work"       class="sidebar__link">Work</a>
+    <a href="/resume.html" class="sidebar__link">Resume</a>
+    <a href="/index.html#about"      class="sidebar__link">About</a>
+  </nav>
+  <div class="sidebar__bottom">
+    <button class="theme-toggle" data-theme-toggle aria-label="Toggle light/dark mode" style="position:relative">
+      <svg class="theme-toggle__icon theme-toggle__icon--sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="theme-toggle__icon theme-toggle__icon--moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="main">
+  <section class="lost">
+    <div class="lost__inner">
+      <div class="lost__character" id="lost-character" role="img" aria-label="Fiero's dizzy character spinning in place"></div>
+      <p class="lost__code">404 · Page not found</p>
+      <h1>This page got a little dizzy.</h1>
+      <p>The link may be old or mistyped. Fiero's character is still spinning, but you can head back to the work.</p>
+      <div class="lost__actions">
+        <a class="btn btn--ghost" href="/index.html#work">See selected work</a>
+        <a class="btn btn--ghost" href="/resume.html">Résumé</a>
+      </div>
+      <p class="lost__path" id="lost-path"></p>
+    </div>
+  </section>
+</main>
+
+<script src="/js/main.js?v=responsive-theme-1" defer></script>
+<script src="/js/vendor/lottie-light-5.12.2.min.js" defer></script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const path = document.getElementById('lost-path');
+    if (location.pathname !== '/404.html') path.textContent = location.pathname;
+    const box = document.getElementById('lost-character');
+    if (!window.lottie) return;
+    const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const anim = lottie.loadAnimation({ container: box, renderer: 'svg', loop: true, autoplay: !still, path: '/media/fiero/tonto-rosa.json' });
+    if (still) anim.addEventListener('DOMLoaded', () => anim.goToAndStop(20, true));
+    document.addEventListener('visibilitychange', () => { if (!still) document.hidden ? anim.pause() : anim.play(); });
+  });
+</script>
+</body>
+</html>
