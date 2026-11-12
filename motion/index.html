@@ -3,46 +3,71 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#111111">
+  <meta name="theme-color" content="#171717">
   <title>Brenda Linck — Motion</title>
   <meta name="description" content="Motion por Brenda Linck. brenda.linck@gmail.com">
-  <link rel="stylesheet" href="motion.css">
-  <script src="motion.js" defer></script>
+  <link rel="stylesheet" href="motion.css?v=dark-mix-3">
+  <script src="../js/vendor/lottie-5.12.2.min.js" defer></script>
+  <script src="motion.js?v=lottie-2" defer></script>
 </head>
 <body>
   <header><a class="email" href="mailto:brenda.linck@gmail.com">brenda.linck@gmail.com</a></header>
   <main class="gallery" aria-label="Trabalhos de motion">
+    <button class="clip" style="--ratio:1920/1080" type="button" aria-label="Reproduzir JUDITE_Sting_30fps__v3">
+      <img src="media/32.jpg" width="1920" height="1080" alt="" loading="eager" decoding="async">
+      <video data-src="media/32.mp4" poster="media/32.jpg" width="1920" height="1080" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+    </button>
     <button class="clip" style="--ratio:1080/1920" type="button" aria-label="Reproduzir NikeSCI_CollectionLaunch - IS02">
       <img src="media/33.jpg" width="1080" height="1920" alt="" loading="eager" decoding="async">
       <video data-src="media/33.mp4" poster="media/33.jpg" width="1080" height="1920" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
     </button>
-    <button class="clip" style="--ratio:1920/1080" type="button" aria-label="Reproduzir -Bonde-ilustra 3">
-      <img src="media/01.jpg" width="1920" height="1080" alt="" loading="eager" decoding="async">
-      <video data-src="media/01.mp4" poster="media/01.jpg" width="1920" height="1080" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+    <button id="bonde-animations" class="clip clip--animation" style="--ratio:1920/1080" type="button" aria-label="Reproduzir Bonde: ilustração 2">
+      <img src="posters/comp-bond-ilustra-2-dark.jpg" width="1920" height="1080" alt="" loading="eager" decoding="async">
+      <div class="animation-canvas" data-animation-src="animations/comp-bond-ilustra-2.json" aria-hidden="true"></div>
+    </button>
+    <button class="clip" style="--ratio:1920/1080" type="button" aria-label="Reproduzir JUDITE_Cam-CHAT_loop">
+      <img src="media/29.jpg" width="1920" height="1080" alt="" loading="eager" decoding="async">
+      <video data-src="media/29.mp4" poster="media/29.jpg" width="1920" height="1080" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
     </button>
     <button class="clip" style="--ratio:1636/888" type="button" aria-label="Reproduzir -logo_ppt_3">
       <img src="media/15.jpg" width="1636" height="888" alt="" loading="eager" decoding="async">
       <video data-src="media/15.mp4" poster="media/15.jpg" width="1636" height="888" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
     </button>
+    <button class="clip" style="--ratio:440/192" type="button" aria-label="Reproduzir JUDITE_MusicLoop">
+      <img src="media/31.jpg" width="440" height="192" alt="" loading="eager" decoding="async">
+      <video data-src="media/31.mp4" poster="media/31.jpg" width="440" height="192" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+    </button>
+    <button class="clip clip--animation" style="--ratio:1920/1080" type="button" aria-label="Reproduzir Bonde: serviço 1">
+      <img src="posters/comp-servicos-1-dark.jpg" width="1920" height="1080" alt="" loading="lazy" decoding="async">
+      <div class="animation-canvas" data-animation-src="animations/comp-servicos-1.json" aria-hidden="true"></div>
+    </button>
     <button class="clip" style="--ratio:406/720" type="button" aria-label="Reproduzir Reel atualizado - 09_18">
-      <img src="media/35.jpg" width="406" height="720" alt="" loading="eager" decoding="async">
+      <img src="media/35.jpg" width="406" height="720" alt="" loading="lazy" decoding="async">
       <video data-src="media/35.mp4" poster="media/35.jpg" width="406" height="720" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
     </button>
-    <button class="clip" style="--ratio:950/584" type="button" aria-label="Reproduzir -Bonde-ilustra-2_1">
-      <img src="media/03.jpg" width="950" height="584" alt="" loading="eager" decoding="async">
-      <video data-src="media/03.mp4" poster="media/03.jpg" width="950" height="584" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+    <button class="clip" style="--ratio:1920/1080" type="button" aria-label="Reproduzir JUDITE#End_Screen_1">
+      <img src="media/26.jpg" width="1920" height="1080" alt="" loading="lazy" decoding="async">
+      <video data-src="media/26.mp4" poster="media/26.jpg" width="1920" height="1080" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+    </button>
+    <button class="clip" style="--ratio:1256/1200" type="button" aria-label="Reproduzir JUDITE_DONATE-">
+      <img src="media/30.jpg" width="1256" height="1200" alt="" loading="lazy" decoding="async">
+      <video data-src="media/30.mp4" poster="media/30.jpg" width="1256" height="1200" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
     </button>
     <button class="clip" style="--ratio:1920/1080" type="button" aria-label="Reproduzir -Artboard 1_7">
-      <img src="media/00.jpg" width="1920" height="1080" alt="" loading="eager" decoding="async">
+      <img src="media/00.jpg" width="1920" height="1080" alt="" loading="lazy" decoding="async">
       <video data-src="media/00.mp4" poster="media/00.jpg" width="1920" height="1080" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
     </button>
-    <button class="clip" style="--ratio:1080/1920" type="button" aria-label="Reproduzir NikeSCI_CollectionLaunch - IS03">
-      <img src="media/34.jpg" width="1080" height="1920" alt="" loading="lazy" decoding="async">
-      <video data-src="media/34.mp4" poster="media/34.jpg" width="1080" height="1920" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+    <button class="clip" style="--ratio:1920/1080" type="button" aria-label="Reproduzir JUDITE_Break_semchat_LOGOIN">
+      <img src="media/27.jpg" width="1920" height="1080" alt="" loading="lazy" decoding="async">
+      <video data-src="media/27.mp4" poster="media/27.jpg" width="1920" height="1080" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
     </button>
-    <button class="clip" style="--ratio:1920/1080" type="button" aria-label="Reproduzir -Bonde-ilustra-1">
-      <img src="media/02.jpg" width="1920" height="1080" alt="" loading="lazy" decoding="async">
-      <video data-src="media/02.mp4" poster="media/02.jpg" width="1920" height="1080" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+    <button class="clip clip--animation" style="--ratio:1920/1080" type="button" aria-label="Reproduzir Bonde: serviço 2">
+      <img src="posters/comp-servicos-2-dark.jpg" width="1920" height="1080" alt="" loading="lazy" decoding="async">
+      <div class="animation-canvas" data-animation-src="animations/comp-servicos-2.json" aria-hidden="true"></div>
+    </button>
+    <button class="clip" style="--ratio:1920/1080" type="button" aria-label="Reproduzir JUDITE_Break_semchat_TEXTO">
+      <img src="media/28.jpg" width="1920" height="1080" alt="" loading="lazy" decoding="async">
+      <video data-src="media/28.mp4" poster="media/28.jpg" width="1920" height="1080" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
     </button>
     <button class="clip" style="--ratio:1920/1080" type="button" aria-label="Reproduzir -comp-servicos-9">
       <img src="media/12.jpg" width="1920" height="1080" alt="" loading="lazy" decoding="async">
@@ -59,6 +84,10 @@
     <button class="clip" style="--ratio:708/616" type="button" aria-label="Reproduzir -Tonto">
       <img src="media/10.jpg" width="708" height="616" alt="" loading="lazy" decoding="async">
       <video data-src="media/10.mp4" poster="media/10.jpg" width="708" height="616" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+    </button>
+    <button class="clip clip--animation" style="--ratio:1078/738" type="button" aria-label="Reproduzir Bonde: serviço 3">
+      <img src="posters/comp-servicos-3-dark.jpg" width="1078" height="738" alt="" loading="lazy" decoding="async">
+      <div class="animation-canvas" data-animation-src="animations/comp-servicos-3.json" aria-hidden="true"></div>
     </button>
     <button class="clip" style="--ratio:1080/2300" type="button" aria-label="Reproduzir -Login-2_1">
       <img src="media/07.jpg" width="1080" height="2300" alt="" loading="lazy" decoding="async">
@@ -80,6 +109,10 @@
       <img src="media/16.jpg" width="1080" height="1080" alt="" loading="lazy" decoding="async">
       <video data-src="media/16.mp4" poster="media/16.jpg" width="1080" height="1080" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
     </button>
+    <button class="clip clip--animation" style="--ratio:1920/1080" type="button" aria-label="Reproduzir Bonde: serviço 4">
+      <img src="posters/comp-servicos-4-dark.jpg" width="1920" height="1080" alt="" loading="lazy" decoding="async">
+      <div class="animation-canvas" data-animation-src="animations/comp-servicos-4.json" aria-hidden="true"></div>
+    </button>
     <button class="clip" style="--ratio:1080/1080" type="button" aria-label="Reproduzir 2021-07-12-feed-brinox-panela-vapt">
       <img src="media/18.jpg" width="1080" height="1080" alt="" loading="lazy" decoding="async">
       <video data-src="media/18.mp4" poster="media/18.jpg" width="1080" height="1080" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
@@ -99,6 +132,10 @@
     <button class="clip" style="--ratio:1080/1920" type="button" aria-label="Reproduzir 2021-08-27-Story 4">
       <img src="media/21.jpg" width="1080" height="1920" alt="" loading="lazy" decoding="async">
       <video data-src="media/21.mp4" poster="media/21.jpg" width="1080" height="1920" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+    </button>
+    <button class="clip" style="--ratio:1080/1920" type="button" aria-label="Reproduzir VIDEO 2-">
+      <img src="media/46.jpg" width="1080" height="1920" alt="" loading="lazy" decoding="async">
+      <video data-src="media/46.mp4" poster="media/46.jpg" width="1080" height="1920" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
     </button>
     <button class="clip" style="--ratio:1080/1920" type="button" aria-label="Reproduzir 2021-10-07-t1_1">
       <img src="media/22.jpg" width="1080" height="1920" alt="" loading="lazy" decoding="async">
@@ -120,6 +157,10 @@
       <img src="media/14.jpg" width="1080" height="1920" alt="" loading="lazy" decoding="async">
       <video data-src="media/14.mp4" poster="media/14.jpg" width="1080" height="1920" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
     </button>
+    <button class="clip clip--animation" style="--ratio:2306/1173" type="button" aria-label="Reproduzir Bonde: serviço 5">
+      <img src="posters/comp-servicos-5-dark.jpg" width="2306" height="1173" alt="" loading="lazy" decoding="async">
+      <div class="animation-canvas" data-animation-src="animations/comp-servicos-5.json" aria-hidden="true"></div>
+    </button>
     <button class="clip" style="--ratio:540/960" type="button" aria-label="Reproduzir A Urban">
       <img src="media/24.jpg" width="540" height="960" alt="" loading="lazy" decoding="async">
       <video data-src="media/24.mp4" poster="media/24.jpg" width="540" height="960" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
@@ -140,13 +181,17 @@
       <img src="media/52.jpg" width="576" height="1028" alt="" loading="lazy" decoding="async">
       <video data-src="media/52.mp4" poster="media/52.jpg" width="576" height="1028" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
     </button>
+    <button class="clip clip--animation" style="--ratio:1920/1080" type="button" aria-label="Reproduzir Bonde: serviço 6">
+      <img src="posters/comp-servicos-6-dark.jpg" width="1920" height="1080" alt="" loading="lazy" decoding="async">
+      <div class="animation-canvas" data-animation-src="animations/comp-servicos-6.json" aria-hidden="true"></div>
+    </button>
     <button class="clip" style="--ratio:1080/1920" type="button" aria-label="Reproduzir video 2 15s-v2">
       <img src="media/53.jpg" width="1080" height="1920" alt="" loading="lazy" decoding="async">
       <video data-src="media/53.mp4" poster="media/53.jpg" width="1080" height="1920" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
     </button>
-    <button class="clip" style="--ratio:1920/1080" type="button" aria-label="Reproduzir JUDITE_Sting_30fps__v3">
-      <img src="media/32.jpg" width="1920" height="1080" alt="" loading="lazy" decoding="async">
-      <video data-src="media/32.mp4" poster="media/32.jpg" width="1920" height="1080" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+    <button class="clip" style="--ratio:950/584" type="button" aria-label="Reproduzir -Bonde-ilustra-2_1">
+      <img src="media/03.jpg" width="950" height="584" alt="" loading="lazy" decoding="async">
+      <video data-src="media/03.mp4" poster="media/03.jpg" width="950" height="584" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
     </button>
     <button class="clip" style="--ratio:1416/996" type="button" aria-label="Reproduzir Screen Recording 2023-06-21 at 18.20.16">
       <img src="media/36.jpg" width="1416" height="996" alt="" loading="lazy" decoding="async">
@@ -160,29 +205,9 @@
       <img src="media/37.jpg" width="1032" height="1438" alt="" loading="lazy" decoding="async">
       <video data-src="media/37.mp4" poster="media/37.jpg" width="1032" height="1438" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
     </button>
-    <button class="clip" style="--ratio:1920/1080" type="button" aria-label="Reproduzir JUDITE#End_Screen_1">
-      <img src="media/26.jpg" width="1920" height="1080" alt="" loading="lazy" decoding="async">
-      <video data-src="media/26.mp4" poster="media/26.jpg" width="1920" height="1080" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
-    </button>
-    <button class="clip" style="--ratio:1920/1080" type="button" aria-label="Reproduzir JUDITE_Break_semchat_LOGOIN">
-      <img src="media/27.jpg" width="1920" height="1080" alt="" loading="lazy" decoding="async">
-      <video data-src="media/27.mp4" poster="media/27.jpg" width="1920" height="1080" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
-    </button>
-    <button class="clip" style="--ratio:1920/1080" type="button" aria-label="Reproduzir JUDITE_Break_semchat_TEXTO">
-      <img src="media/28.jpg" width="1920" height="1080" alt="" loading="lazy" decoding="async">
-      <video data-src="media/28.mp4" poster="media/28.jpg" width="1920" height="1080" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
-    </button>
-    <button class="clip" style="--ratio:1920/1080" type="button" aria-label="Reproduzir JUDITE_Cam-CHAT_loop">
-      <img src="media/29.jpg" width="1920" height="1080" alt="" loading="lazy" decoding="async">
-      <video data-src="media/29.mp4" poster="media/29.jpg" width="1920" height="1080" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
-    </button>
-    <button class="clip" style="--ratio:1256/1200" type="button" aria-label="Reproduzir JUDITE_DONATE-">
-      <img src="media/30.jpg" width="1256" height="1200" alt="" loading="lazy" decoding="async">
-      <video data-src="media/30.mp4" poster="media/30.jpg" width="1256" height="1200" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
-    </button>
-    <button class="clip" style="--ratio:440/192" type="button" aria-label="Reproduzir JUDITE_MusicLoop">
-      <img src="media/31.jpg" width="440" height="192" alt="" loading="lazy" decoding="async">
-      <video data-src="media/31.mp4" poster="media/31.jpg" width="440" height="192" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+    <button class="clip clip--animation" style="--ratio:1234/893" type="button" aria-label="Reproduzir Bonde: serviço 7">
+      <img src="posters/comp-servicos-7-dark.jpg" width="1234" height="893" alt="" loading="lazy" decoding="async">
+      <div class="animation-canvas" data-animation-src="animations/comp-servicos-7.json" aria-hidden="true"></div>
     </button>
     <button class="clip" style="--ratio:1024/956" type="button" aria-label="Reproduzir Screen Recording 2023-06-23 at 10.36.43_1">
       <img src="media/38.jpg" width="1024" height="956" alt="" loading="lazy" decoding="async">
@@ -204,6 +229,10 @@
       <img src="media/42.jpg" width="984" height="980" alt="" loading="lazy" decoding="async">
       <video data-src="media/42.mp4" poster="media/42.jpg" width="984" height="980" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
     </button>
+    <button class="clip clip--animation" style="--ratio:1747/2386" type="button" aria-label="Reproduzir Bonde: serviço 8">
+      <img src="posters/comp-servicos-8-dark.jpg" width="1747" height="2386" alt="" loading="lazy" decoding="async">
+      <div class="animation-canvas" data-animation-src="animations/comp-servicos-8.json" aria-hidden="true"></div>
+    </button>
     <button class="clip" style="--ratio:1724/896" type="button" aria-label="Reproduzir Screen Recording 2023-06-23 at 10.46.33">
       <img src="media/43.jpg" width="1724" height="896" alt="" loading="lazy" decoding="async">
       <video data-src="media/43.mp4" poster="media/43.jpg" width="1724" height="896" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
@@ -212,26 +241,24 @@
       <img src="media/44.jpg" width="798" height="768" alt="" loading="lazy" decoding="async">
       <video data-src="media/44.mp4" poster="media/44.jpg" width="798" height="768" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
     </button>
-    <button class="clip" style="--ratio:1080/1920" type="button" aria-label="Reproduzir VIDEO 1-">
-      <img src="media/45.jpg" width="1080" height="1920" alt="" loading="lazy" decoding="async">
-      <video data-src="media/45.mp4" poster="media/45.jpg" width="1080" height="1920" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
-    </button>
-    <button class="clip" style="--ratio:1080/1920" type="button" aria-label="Reproduzir VIDEO 2-">
-      <img src="media/46.jpg" width="1080" height="1920" alt="" loading="lazy" decoding="async">
-      <video data-src="media/46.mp4" poster="media/46.jpg" width="1080" height="1920" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
-    </button>
     <button class="clip" style="--ratio:1420/918" type="button" aria-label="Reproduzir leap-orbit-exploration">
       <img src="media/51.jpg" width="1420" height="918" alt="" loading="lazy" decoding="async">
       <video data-src="media/51.mp4" poster="media/51.jpg" width="1420" height="918" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+    </button>
+    <button class="clip clip--animation" style="--ratio:1920/1080" type="button" aria-label="Reproduzir Bonde: serviço 9">
+      <img src="posters/comp-servicos-9-dark.jpg" width="1920" height="1080" alt="" loading="lazy" decoding="async">
+      <div class="animation-canvas" data-animation-src="animations/comp-servicos-9.json" aria-hidden="true"></div>
     </button>
     <button class="clip" style="--ratio:1420/918" type="button" aria-label="Reproduzir leap-map-interaction">
       <img src="media/50.jpg" width="1420" height="918" alt="" loading="lazy" decoding="async">
       <video data-src="media/50.mp4" poster="media/50.jpg" width="1420" height="918" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
     </button>
   </main>
-  <dialog aria-label="Vídeo ampliado">
-    <video class="viewer-video" controls playsinline preload="none"></video>
-    <button class="close" type="button" aria-label="Fechar vídeo"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6" stroke="currentColor" stroke-width="1.5"/></svg></button>
+  <dialog aria-label="Visualização ampliada">
+    <video class="viewer-video" controls playsinline preload="none" hidden></video>
+    <div class="viewer-animation" aria-label="Animação" hidden></div>
+    <button class="viewer-playback" type="button" aria-label="Pausar animação" hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path data-playback-icon d="M7 5h4v14H7zM14 5h4v14h-4z"/></svg></button>
+    <button class="close" type="button" aria-label="Fechar visualização"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6" stroke="currentColor" stroke-width="1.5"/></svg></button>
   </dialog>
 </body>
 </html>
