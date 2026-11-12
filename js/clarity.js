@@ -36,6 +36,18 @@
     document.addEventListener('auxclick', carry, true);
   }
 
+  // Short analytics notice at the bottom of every page that loads this script.
+  const addNotice = () => {
+    if (document.getElementById('analytics-notice')) return;
+    const notice = document.createElement('p');
+    notice.id = 'analytics-notice';
+    notice.textContent = 'This site uses Microsoft Clarity to understand how pages are visited. To opt out, turn on Global Privacy Control or Do Not Track in your browser.';
+    notice.style.cssText = 'margin:0 auto;padding:8px 16px calc(24px + env(safe-area-inset-bottom, 0px));max-width:640px;text-align:center;font-size:12px;line-height:1.5;opacity:.6;';
+    document.body.appendChild(notice);
+  };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', addNotice);
+  else addNotice();
+
   if (!projectId || !productionHosts.includes(location.hostname)) return;
   const automated = navigator.webdriver === true || /HeadlessChrome|HeadlessShell/i.test(navigator.userAgent);
   if (automated || window.__PORTFOLIO_DISABLE_ANALYTICS__ === true) {
