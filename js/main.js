@@ -4,26 +4,6 @@
 
 // Theme initialization and controls are shared in theme.js.
 
-// Keep case navigation inside the alternate homepage when explicitly opened from it.
-(() => {
-  if (new URLSearchParams(location.search).get('view') !== 'valdivia') return;
-  const cases = new Set(['loopt.html','fyn.html','leap.html','smartyard.html','bonde.html','fiero.html','role.html','millie.html','student-plan.html','archive.html']);
-  const directory = location.pathname.slice(0, location.pathname.lastIndexOf('/') + 1);
-  document.querySelectorAll('a[href]').forEach(link => {
-    const href = link.getAttribute('href');
-    if (!href || href.startsWith('#')) return;
-    const url = new URL(href, location.href);
-    if (url.origin !== location.origin || url.pathname.slice(0, url.pathname.lastIndexOf('/') + 1) !== directory) return;
-    const name = url.pathname.split('/').pop();
-    if (name === 'index.html') {
-      url.pathname = directory + 'home-valdivia.html';
-      if (!url.hash && link.classList.contains('case-back')) url.hash = 'work';
-    } else if (cases.has(name)) url.searchParams.set('view', 'valdivia');
-    else return;
-    link.href = url.href;
-  });
-})();
-
 // Scroll-triggered animations
 const animObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
