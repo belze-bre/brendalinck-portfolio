@@ -212,7 +212,6 @@ ul { list-style: none; }
   .work-card__description { font-size:14px; }
   .work-card__role { margin-top:16px; }
   .phone-preview { border-width:4px; border-radius:18px; }
-  .sidebar__nav .sidebar__link[href="resume.html"] { display:block; }
 }
 @media(max-width:599px) {
   .hero-identity { display:block; }
@@ -541,8 +540,6 @@ ul { list-style: none; }
   .writing-grid { grid-template-columns: 1fr; }
 }
 
-/* Keep the dedicated résumé accessible in the mobile navigation. */
-@media (max-width:767px) { .sidebar__nav .sidebar__link[href="resume.html"] { display:block; } }
 
 /* Fiero — original competition interface preview */
 .work-card__media--fiero{background:#d9d4ef;display:flex;justify-content:center;align-items:flex-start;overflow:hidden;padding:24px 0 0}
