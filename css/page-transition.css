@@ -1,16 +1,19 @@
-/* Page transition — four panels seal the viewport, a 1px line grows from the
-   centre, four points mark its ends; on arrival the panels part toward the
-   edges and the points shoot to the corners, revealing the new page through an
-   expanding rectangle. Animation lives in js/page-transition.js (WAAPI).
-   CSS only declares resting ("covered") state.
+/* Page transition — four panels close completely over the viewport (their
+   edges meet and overlap at the centre, no square or line is drawn), then part
+   toward the edges on arrival to reveal the new page. Animation lives in
+   js/page-transition.js (WAAPI). CSS only declares the resting ("covered") state.
+
+   Four anchor dots and a 1px frame guide the movement: they start at the
+   screen corners and converge to a single point at the centre (and back).
 
    Knobs:
      --pt-panel   panel colour   (default: page background)
-     --pt-ink     line + points  (default: page text colour)
-     --pt-box     side of the square frame (default: clamp(140px, 24vw, 340px))                          */
+     --pt-ink     dots + line    (default: page text colour)
+     --pt-inset   distance of the corner anchors from the screen edge (28px;
+                  keep in sync with INSET in js/page-transition.js)           */
 
 .pt {
-  --pt-box: clamp(140px, 24vw, 340px);
+  --pt-inset: 28px;
   position: fixed;
   inset: 0;
   z-index: 9999;
@@ -30,19 +33,18 @@
 .pt__panel--bottom { bottom: 0; }
 .pt__panel--left, .pt__panel--right {
   top: 0; height: 100%;
-  width: calc(50% - var(--pt-box) / 2);
+  width: calc(50% + 1px);
 }
 .pt__panel--left { left: 0; }
 .pt__panel--right { right: 0; }
 
 .pt__line {
   position: absolute;
-  top: 50%; left: 50%;
-  width: var(--pt-box); height: var(--pt-box);
-  margin: calc(var(--pt-box) / -2) 0 0 calc(var(--pt-box) / -2);
+  inset: var(--pt-inset);
   box-sizing: border-box;
   border: 1px solid var(--pt-ink, var(--color-text, #f0f0ee));
-  will-change: opacity;
+  transform-origin: 50% 50%;
+  will-change: transform, opacity;
 }
 
 .pt__point {
@@ -53,12 +55,10 @@
   background: var(--pt-ink, var(--color-text, #f0f0ee));
   will-change: transform, opacity;
 }
-.pt__point--tl, .pt__point--bl { left: calc(50% - var(--pt-box) / 2); }
-.pt__point--tr, .pt__point--br { left: calc(50% + var(--pt-box) / 2); }
-.pt__point--tl, .pt__point--tr { top: calc(50% - var(--pt-box) / 2); }
-.pt__point--bl, .pt__point--br { top: calc(50% + var(--pt-box) / 2); }
-
-@media (max-width: 700px) { .pt { --pt-box: 46vw; } }
+.pt__point--tl, .pt__point--bl { left: var(--pt-inset); }
+.pt__point--tr, .pt__point--br { left: calc(100% - var(--pt-inset)); }
+.pt__point--tl, .pt__point--tr { top: var(--pt-inset); }
+.pt__point--bl, .pt__point--br { top: calc(100% - var(--pt-inset)); }
 
 /* Arriving via a transition: cover the first paint until JS takes over.
    Failsafe — if the script never runs, the curtain fades itself away. */

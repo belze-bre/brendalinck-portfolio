@@ -8,6 +8,7 @@
   var CLOSE_MS = 800;
   var OPEN_MS = 1000;
   var SCALE = 1.04;
+  var INSET = 28; // px from the screen edge to the corner anchors (keep in sync with CSS --pt-inset)
 
   var root = document.documentElement;
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -33,24 +34,21 @@
     parts.line.className = 'pt__line';
     wrap.appendChild(parts.line);
     parts.points = ['tl', 'tr', 'bl', 'br'].map(function (n) {
-      var p = document.createElement('div');
-      p.className = 'pt__point pt__point--' + n;
-      p.dataset.corner = n;
-      wrap.appendChild(p);
-      return p;
+      var d = document.createElement('div');
+      d.className = 'pt__point pt__point--' + n;
+      d.dataset.corner = n;
+      wrap.appendChild(d);
+      return d;
     });
     document.body.appendChild(wrap);
     parts.wrap = wrap;
     return parts;
   }
 
-  // Offsets that send each point from the square's corner to its screen corner.
-  function cornerOffset(corner, boxW, boxH) {
-    var dx = (window.innerWidth - boxW) / 2, dy = (window.innerHeight - boxH) / 2;
-    return {
-      x: corner.charAt(1) === 'l' ? -dx : dx,
-      y: corner.charAt(0) === 't' ? -dy : dy
-    };
+  // Offset that carries a point from its corner anchor to the screen centre.
+  function toCentre(corner) {
+    var dx = window.innerWidth / 2 - INSET, dy = window.innerHeight / 2 - INSET;
+    return { x: corner.charAt(1) === 'l' ? dx : -dx, y: corner.charAt(0) === 't' ? dy : -dy };
   }
 
   function anim(node, frames, ms, delay) {
@@ -65,7 +63,6 @@
   }
 
   function run(opening) {
-    var boxW = el.line.offsetWidth, boxH = el.line.offsetHeight;
     var main = document.querySelector('.main');
     var ms = opening ? OPEN_MS : CLOSE_MS;
     var anims = [];
@@ -75,19 +72,18 @@
       anims.push(anim(el[n], panelFrames(n, opening), ms));
     });
 
+    // Four anchors travel between the screen corners and the centre; the thin
+    // frame joining them shrinks to nothing, so no square is left at rest.
     el.points.forEach(function (p) {
-      var o = cornerOffset(p.dataset.corner, boxW, boxH);
-      var corner = 'translate(' + o.x + 'px,' + o.y + 'px)';
-      var at = 'translate(0,0)';
-      anims.push(anim(p, opening ? [{ transform: at }, { transform: corner }] : [{ transform: corner }, { transform: at }], ms));
-      // points fade out on open (after half), in at the very start of close
-      anims.push(p.animate(opening ? [{ opacity: 1 }, { opacity: 1, offset: 0.5 }, { opacity: 0 }] : [{ opacity: 0 }, { opacity: 1, offset: 0.35 }, { opacity: 1 }],
+      var c = toCentre(p.dataset.corner);
+      var corner = 'translate(0,0)', centre = 'translate(' + c.x + 'px,' + c.y + 'px)';
+      anims.push(anim(p, opening ? [{ transform: centre }, { transform: corner }] : [{ transform: corner }, { transform: centre }], ms));
+      anims.push(p.animate(opening ? [{ opacity: 1 }, { opacity: 1, offset: 0.6 }, { opacity: 0 }] : [{ opacity: 0 }, { opacity: 1, offset: 0.3 }, { opacity: 1 }],
         { duration: ms, easing: 'linear', fill: 'both' }));
     });
-
-    // line shows once sealed, fades as it opens
-    anims.push(el.line.animate(opening ? [{ opacity: 1 }, { opacity: 0 }] : [{ opacity: 0, offset: 0.7 }, { opacity: 1 }],
-      { duration: opening ? 250 : ms, easing: 'linear', fill: 'both' }));
+    anims.push(anim(el.line, opening ? [{ transform: 'scale(0)', opacity: 1 }, { transform: 'scale(1)', opacity: 1 }] : [{ transform: 'scale(1)', opacity: 1 }, { transform: 'scale(0)', opacity: 1 }], ms));
+    anims.push(el.line.animate(opening ? [{ opacity: 1 }, { opacity: 1, offset: 0.6 }, { opacity: 0 }] : [{ opacity: 0 }, { opacity: 1, offset: 0.3 }, { opacity: 1 }],
+      { duration: ms, easing: 'linear', fill: 'both' }));
 
     if (main) {
       anims.push(main.animate(opening
